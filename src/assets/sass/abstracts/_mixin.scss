@@ -1,5 +1,9 @@
 @use "./variables";
 
+@mixin max-width {
+  max-width: 90rem; /*1440px*/
+  margin: 0;
+}
 
 @mixin grid {
   margin: 0 5.4375rem 0 5.4375rem; /*87px*/

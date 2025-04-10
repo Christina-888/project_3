@@ -5,14 +5,16 @@
   @include mixin.grid;
   margin-top: 7rem; /*112px*/
   display: flex;
+  min-height: 300px;
 }
 .section-project__questions {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 2rem;
   width: 47.4%;
 }
-.subtitle {
+.section-project__subtitle {
   font-family: "DM Serif Display";
   font-size: 2.8125rem; /*45px*/
   color: variables.$darkgreen;
@@ -22,7 +24,7 @@
   flex-direction: column;
   width: 52.6%;
 }
-.subtitle_black {
+.section-project__subtitle_black {
   color: rgba(0, 0, 0, 0.8);
 }
 .section-project__text {

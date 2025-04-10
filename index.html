@@ -13,195 +13,215 @@
   </head>
 
   <body class="container">
-    <header class="header">
-      <div class="header__logo" id="logo">
-        <a class="header__logo-link" href="index.html">
-          <svg class="header__logo-icon">
-            <use xlink:href="./src/assets/icons/sprite.svg#logo_icon"></use>
-          </svg>
-          <p class="header__logo-text">LFPlanner</p>
-        </a>
+    <div class="container__preloader">
+      <div class="container__circle">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
       </div>
-      <div class="header__wrap">
-        <nav class="header__nav">
-          <ul class="header__nav-list">
-            <li class="header__list-item">
-              <a href="index.html#home" class="header__item-link">Home</a>
-            </li>
-            <li class="header__list-item">
-              <a href="index.html#project" class="header__item-link"
-                >About project</a
-              >
-            </li>
-            <li class="header__list-item">
-              <a href="index.html#planner" class="header__item-link">Planner</a>
-            </li>
-            <li class="header__list-item">
-              <a href="index.html#charts" class="header__item-link">Charts</a>
-            </li>
-            <li class="header__list-item">
-              <a href="mailto:email@lfplanner.com" class="header__item-link"
-                >Support</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <svg class="header__account-icon">
-          <use xlink:href="./src/assets/icons/sprite.svg#user"></use>
-        </svg>
-      </div>
-    </header>
-    <main class="main">
-      <section class="section-home" id="home">
-        <div class="section-home__cover">
-          <img
-            src="./src/assets/img/plant.png"
-            alt="growth money plant"
-            class="section-home__img"
-          />
+    </div>
+    <div class="container__wrap">
+      <header class="header">
+        <div class="header__wrap">
+          <div class="header__logo" id="logo">
+            <a class="header__logo-link" href="index.html">
+              <svg class="header__logo-icon">
+                <use xlink:href="./src/assets/icons/sprite.svg#logo_icon"></use>
+              </svg>
+              <p class="header__logo-text">LFPlanner</p>
+            </a>
+          </div>
+          <div class="header__wrap-nav">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__list-item">
+                  <a href="index.html#home" class="header__item-link">Home</a>
+                </li>
+                <li class="header__list-item">
+                  <a href="index.html#project" class="header__item-link"
+                    >About project</a
+                  >
+                </li>
+                <li class="header__list-item">
+                  <a href="index.html#planner" class="header__item-link"
+                    >Planner</a
+                  >
+                </li>
+                <li class="header__list-item">
+                  <a href="index.html#charts" class="header__item-link"
+                    >Charts</a
+                  >
+                </li>
+                <li class="header__list-item">
+                  <a href="mailto:email@lfplanner.com" class="header__item-link"
+                    >Support</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <svg class="header__account-icon">
+              <use xlink:href="./src/assets/icons/sprite.svg#user"></use>
+            </svg>
+          </div>
         </div>
-        <div class="section-home__textWrap">
-          <h1 class="section-home__title">
-            Easy way to manage <br />your life and finance
-          </h1>
-          <a href="index.html#planner" class="section-home__link"
-            >Try it now!</a
+      </header>
+      <main class="main">
+        <section class="section-home" id="home">
+          <div class="section-home__cover">
+            <img
+              src="./src/assets/img/plant.png"
+              alt="growth money plant"
+              class="section-home__img"
+            />
+          </div>
+          <div class="section-home__textWrap">
+            <h1 class="section-home__title">
+              Easy way to manage <br />your life and finance
+            </h1>
+            <a href="index.html#planner" class="section-home__link"
+              >Try it now!</a
+            >
+            <p class="section-home__text">Just try.</p>
+          </div>
+        </section>
+        <section class="section-project" id="project">
+          <div class="section-project__questions">
+            <h2 class="section-project__subtitle">
+              Does your budget often <br />
+              end up in the red?
+            </h2>
+            <h2 class="section-project__subtitle">
+              Struggling to prioritize <br />your purchases?
+            </h2>
+            <h2 class="section-project__subtitle">
+              Confused about payment <br />dates?
+            </h2>
+          </div>
+          <div class="section-project__info">
+            <h2
+              class="section-project__subtitle section-project__subtitle_black"
+            >
+              Our service is ready to assist you!
+            </h2>
+            <p class="section-project__text">With LFPlanner you can easy:</p>
+            <div class="section-project__wrap-item">
+              <svg class="section-project__icon">
+                <use xlink:href="./src/assets/icons/sprite.svg#arrow"></use>
+              </svg>
+              <p class="section-project__text">Plan any tasks daily</p>
+            </div>
+
+            <div class="section-project__wrap-item">
+              <svg class="section-project__icon">
+                <use xlink:href="./src/assets/icons/sprite.svg#arrow"></use>
+              </svg>
+              <p class="section-project__text">
+                Manage your budget in the calendar
+              </p>
+            </div>
+
+            <div class="section-project__wrap-item">
+              <svg class="section-project__icon">
+                <use xlink:href="./src/assets/icons/sprite.svg#arrow"></use>
+              </svg>
+              <p class="section-project__text">
+                Generate analytics on income and expenses
+              </p>
+            </div>
+
+            <p class="section-project__text section-project__text_bold">
+              We'll also notify you if your budget is running low.
+            </p>
+          </div>
+        </section>
+        <!-- <section class="section-planner" id="planner">
+          <h3 class="section-planner__title">Let's try LFPlanner!</h3>
+          <p class="section-planner__text">Please choose the type of planning</p>
+          <div class="section-planner__wrap">
+            <div class="section-planner__wrap-card">
+              <h4 class="section-planner__title section-planner__title_smaller">
+                Planning to do list
+              </h4>
+              <p class="section-planner__card-text">
+                Select this type if there's no need to enter financial data.
+              </p>
+              <a href="" class="section-planner__card-link">
+                <svg class="section-planner__icon">
+                  <use
+                    xlink:href="./src/assets/icons/sprite.svg#double_arrow"
+                  ></use>
+                </svg>
+              </a>
+            </div>
+            <div class="section-planner__wrap-card">
+              <h4 class="section-planner__title section-planner__title_smaller">
+                Planning the budget
+              </h4>
+              <p class="section-planner__card-text">
+                Choose this type if you need to enter information about upcoming
+                expenses or income.
+              </p>
+              <a href="" class="section-planner__card-link">
+                <svg class="section-planner__icon">
+                  <use
+                    xlink:href="./src/assets/icons/sprite.svg#double_arrow"
+                  ></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+        <aside class="aside">
+          <h3 class="aside__title">Free. No ads. Just planning.</h3>
+        </aside>
+        <section class="section-charts" id="charts">
+          <h3 class="section-charts__title">
+            Make your analysis easier with LFPlanner infographics
+          </h3>
+          <div class="section-charts__wrap">
+            <svg class="section-charts__icon">
+              <use
+                xlink:href="./src/assets/icons/sprite.svg#double_left_arrow"
+              ></use>
+            </svg>
+            <div class="section-charts__wrap-charts"></div>
+            <svg class="section-charts__icon">
+              <use
+                xlink:href="./src/assets/icons/sprite.svg#double_right_arrow"
+              ></use>
+            </svg>
+          </div>
+        </section> -->
+      </main>
+      <!-- <footer class="footer">
+        <div class="footer__logo">
+          <a href="index.html#logo">
+            <svg class="footer__logo-icon">
+              <use xlink:href="./src/assets/icons/sprite.svg#logo_icon"></use>
+            </svg>
+            <p class="footer__logo-text">LFPlanner</p>
+          </a>
+        </div>
+        <p class="footer__text">
+          Having trouble?
+          <br />
+          Contact us
+          <a href="mailto:email@lfplanner.com" class="footer__contact-link"
+            >email@lfplanner.com</a
           >
-          <p class="section-home__text">Just try.</p>
-        </div>
-      </section>
-      <section class="section-project" id="project">
-        <div class="section-project__questions">
-          <h2 class="subtitle">
-            Does your budget often <br />
-            end up in the red?
-          </h2>
-          <h2 class="subtitle">
-            Struggling to prioritize <br />your purchases?
-          </h2>
-          <h2 class="subtitle">Confused about payment <br />dates?</h2>
-        </div>
-        <div class="section-project__info">
-          <h2 class="subtitle subtitle_black">
-            Our service is ready to assist you!
-          </h2>
-          <p class="section-project__text">With LFPlanner you can easy:</p>
-          <div class="section-project__wrap-item">
-            <svg class="section-project__icon">
-              <use xlink:href="./src/assets/icons/sprite.svg#arrow"></use>
-            </svg>
-            <p class="section-project__text">Plan any tasks daily</p>
-          </div>
-
-          <div class="section-project__wrap-item">
-            <svg class="section-project__icon">
-              <use xlink:href="./src/assets/icons/sprite.svg#arrow"></use>
-            </svg>
-            <p class="section-project__text">
-              Manage your budget in the calendar
-            </p>
-          </div>
-
-          <div class="section-project__wrap-item">
-            <svg class="section-project__icon">
-              <use xlink:href="./src/assets/icons/sprite.svg#arrow"></use>
-            </svg>
-            <p class="section-project__text">
-              Generate analytics on income and expenses
-            </p>
-          </div>
-
-          <p class="section-project__text section-project__text_bold">
-            We'll also notify you if your budget is running low.
-          </p>
-        </div>
-      </section>
-      <!-- <section class="section-planner" id="planner">
-        <h3 class="section-planner__title">Let's try LFPlanner!</h3>
-        <p class="section-planner__text">Please choose the type of planning</p>
-        <div class="section-planner__wrap">
-          <div class="section-planner__wrap-card">
-            <h4 class="section-planner__title section-planner__title_smaller">
-              Planning to do list
-            </h4>
-            <p class="section-planner__card-text">
-              Select this type if there's no need to enter financial data.
-            </p>
-            <a href="" class="section-planner__card-link">
-              <svg class="section-planner__icon">
-                <use
-                  xlink:href="./src/assets/icons/sprite.svg#double_arrow"
-                ></use>
-              </svg>
-            </a>
-          </div>
-          <div class="section-planner__wrap-card">
-            <h4 class="section-planner__title section-planner__title_smaller">
-              Planning the budget
-            </h4>
-            <p class="section-planner__card-text">
-              Choose this type if you need to enter information about upcoming
-              expenses or income.
-            </p>
-            <a href="" class="section-planner__card-link">
-              <svg class="section-planner__icon">
-                <use
-                  xlink:href="./src/assets/icons/sprite.svg#double_arrow"
-                ></use>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
-      <aside class="aside">
-        <h3 class="aside__title">Free. No ads. Just planning.</h3>
-      </aside>
-      <section class="section-charts" id="charts">
-        <h3 class="section-charts__title">
-          Make your analysis easier with LFPlanner infographics
-        </h3>
-        <div class="section-charts__wrap">
-          <svg class="section-charts__icon">
-            <use
-              xlink:href="./src/assets/icons/sprite.svg#double_left_arrow"
-            ></use>
+        </p>
+        <div class="footer__wrap-socials">
+          <p class="footer__text">Follow us</p>
+          <svg class="footer__socials-icon">
+            <use xlink:href="./src/assets/icons/sprite.svg#vk"></use>
           </svg>
-          <div class="section-charts__wrap-charts"></div>
-          <svg class="section-charts__icon">
-            <use
-              xlink:href="./src/assets/icons/sprite.svg#double_right_arrow"
-            ></use>
+          <svg class="footer__socials-icon">
+            <use xlink:href="./src/assets/icons/sprite.svg#tg"></use>
           </svg>
         </div>
-      </section> -->
-    </main>
-    <!-- <footer class="footer">
-      <div class="footer__logo">
-        <a href="index.html#logo">
-          <svg class="footer__logo-icon">
-            <use xlink:href="./src/assets/icons/sprite.svg#logo_icon"></use>
-          </svg>
-          <p class="footer__logo-text">LFPlanner</p>
-        </a>
-      </div>
-      <p class="footer__text">
-        Having trouble?
-        <br />
-        Contact us
-        <a href="mailto:email@lfplanner.com" class="footer__contact-link"
-          >email@lfplanner.com</a
-        >
-      </p>
-      <div class="footer__wrap-socials">
-        <p class="footer__text">Follow us</p>
-        <svg class="footer__socials-icon">
-          <use xlink:href="./src/assets/icons/sprite.svg#vk"></use>
-        </svg>
-        <svg class="footer__socials-icon">
-          <use xlink:href="./src/assets/icons/sprite.svg#tg"></use>
-        </svg>
-      </div>
-    </footer> -->
+      </footer> -->
+    </div>
 
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>

@@ -1,12 +1,28 @@
 @use "../abstracts/mixin";
 @use "../abstracts/variables";
 
-
 .header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+.header__wrap {
+  box-sizing: border-box;
   @include mixin.grid;
   max-height: 10.125rem; /*162px*/
   display: flex;
   justify-content: space-between;
+
+  
+  transform: translateY(-100%);
+  animation: ani 1.5s forwards;
+
+  @keyframes ani {
+    0% {transform: translateY(-100%);}
+    100% {transform: translateY(0);}
+  }
 }
 .header__logo {
   display: flex;
@@ -37,7 +53,7 @@
   color: variables.$lightblack;
 
 }
-.header__wrap {
+.header__wrap-nav {
   display: flex;
   align-items: center;
   justify-content: end;
@@ -53,7 +69,7 @@
   font-family: "Jost";
   font-size: 1.4375rem; /*23px*/
   font-weight: 350;
-  padding: 0 1.5rem 0 1.5rem;
+  padding: 0 1.25rem 0 1.25rem;
 }
 .header__item-link {
   color: variables.$lightblack;
@@ -62,7 +78,7 @@
   color: variables.$darkgreen;
 }
 .header__item-link:active {
-  color:  variables.$lightgreen;
+  color: variables.$lightgreen;
 }
 .header__account-icon {
   margin-left: 1rem;
