@@ -1,0 +1,53 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+
+.section-project {
+  @include mixin.grid;
+  margin-top: 7rem; /*112px*/
+  display: flex;
+}
+.section-project__questions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 47.4%;
+}
+.subtitle {
+  font-family: "DM Serif Display";
+  font-size: 2.8125rem; /*45px*/
+  color: variables.$darkgreen;
+}
+.section-project__info {
+  display: flex;
+  flex-direction: column;
+  width: 52.6%;
+}
+.subtitle_black {
+  color: rgba(0, 0, 0, 0.8);
+}
+.section-project__text {
+  margin-top: 1.4375rem; /*23px*/
+  font-family: "Jost";
+  font-size: 2.1875rem; /*35px*/
+}
+.section-project__wrap-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.section-project__wrap-item > p {
+margin-left: 1rem;
+}
+.section-project__wrap-item > svg {
+  margin-top: 1.3rem;
+}
+.section-project__wrap-item > svg:last-child {
+  margin-top: 0;
+}
+.section-project__icon {
+  width: 3rem; /*48px*/
+  height: 3rem; /*48px*/
+}
+.section-project__text_bold {
+  font-weight: 600;
+}
