@@ -11,7 +11,7 @@
 .header__logo {
   display: flex;
   align-items: center;
-  margin: 2rem 0 3.75rem 0; /*33px 59px*/
+  margin: 2rem 2rem 3.75rem 0; /*33px 59px*/
 }
 .header__logo-link{
   display: flex;
@@ -40,11 +40,10 @@
 .header__wrap {
   display: flex;
   align-items: center;
-  // display: grid;
-  // grid-template-columns: 4fr 1fr;
-  justify-items: end;
+  justify-content: end;
 }
 .header__nav {
+  margin-right: 1rem;
 }
 .header__nav-list {
   display: flex;
@@ -54,12 +53,28 @@
   font-family: "Jost";
   font-size: 1.4375rem; /*23px*/
   font-weight: 350;
+  padding: 0 1.5rem 0 1.5rem;
 }
 .header__item-link {
   color: variables.$lightblack;
 }
+.header__item-link:hover {
+  color: variables.$darkgreen;
+}
+.header__item-link:active {
+  color:  variables.$lightgreen;
+}
 .header__account-icon {
+  margin-left: 1rem;
   width: 2.5rem; /*40px*/
   height: 2.8125rem; /*45px*/
   fill: variables.$lightblack;
+}
+
+.header__account-icon:hover {
+  fill: variables.$darkgreen;
+}
+
+.header__account-icon:active {
+  fill:  variables.$lightgreen;
 }
