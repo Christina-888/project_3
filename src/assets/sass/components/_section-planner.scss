@@ -40,7 +40,7 @@
   margin-bottom: 15%;
   padding: 6%; 
 }
-.section-planner__wrap-card2 {
+.section-planner__wrap-card-2 {
   grid-area: 1/2/2/3;
 }
 .section-planner__title_smaller {
@@ -69,10 +69,16 @@
   font-weight: bold;
   display: flex;
   justify-content: center;
+  align-items: end;
+  
 }
 .section-planner__icon {
   margin-top: 10%;
   cursor: pointer;
-  
-  
+  width: 3.5rem;
+  height: 2.5rem;
+  border: 2px solid variables.$darkgreen;
+  padding: 2% 12% 1% 15%;
+  border-radius: 25px;
+  width: 100%;
 }
