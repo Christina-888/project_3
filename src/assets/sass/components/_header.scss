@@ -36,10 +36,12 @@
 .header__logo-link:hover>*{
   fill: variables.$darkgreen;
   color:  variables.$darkgreen;
+  filter: drop-shadow(2px 2px 1px variables.$darkgreen-opacity);
 }
 .header__logo-link:active>*{
   fill: variables.$lightgreen;
   color:  variables.$lightgreen;
+  filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
 }
 .header__logo-icon {
   width: 3.625rem; /*58px*/
@@ -76,9 +78,11 @@
 }
 .header__item-link:hover {
   color: variables.$darkgreen;
+  filter: drop-shadow(2px 2px 1px variables.$darkgreen-opacity);
 }
 .header__item-link:active {
   color: variables.$lightgreen;
+  filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
 }
 .header__account-icon {
   margin-left: 1rem;
@@ -89,8 +93,10 @@
 
 .header__account-icon:hover {
   fill: variables.$darkgreen;
+  filter: drop-shadow(2px 2px 1px variables.$darkgreen-opacity);
 }
 
 .header__account-icon:active {
   fill:  variables.$lightgreen;
+  filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
 }
