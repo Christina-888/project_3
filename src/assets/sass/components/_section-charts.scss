@@ -2,12 +2,23 @@
 @use "../abstracts/variables";
 
 .section-charts {
+  padding: 2%;
 }
 .section-charts__title {
+  font-family: "DM Serif Display";
+  font-size: 2.5rem;
+  color: rgb(50, 50, 50);
+  text-align: center;
+  padding: 4%;
 }
 .section-charts__wrap {
+  display: flex;
+  justify-content: space-between;
+  
 }
 .section-charts__icon {
+  width: 3rem;
+
 }
 .section-charts__wrap-charts {
 }
