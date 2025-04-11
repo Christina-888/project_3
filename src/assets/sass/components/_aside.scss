@@ -2,6 +2,12 @@
 @use "../abstracts/variables";
 
 .aside {
+  background-color: rgb(227, 226, 226);
 }
 .aside__title {
+  font-family: "DM Serif Display";
+  font-size: 3.125rem;
+  color: variables.$darkgreen; 
+  text-align: center;
+  padding: 3%;
 }

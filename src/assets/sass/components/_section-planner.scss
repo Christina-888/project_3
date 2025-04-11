@@ -2,20 +2,77 @@
 @use "../abstracts/variables";
 
 .section-planner {
+  margin-top: 2%;
+  background-color: rgb(245, 245, 245);
 }
 .section-planner__title {
+  background-color: variables.$darkgreen;
+  color: white;
+  text-align: center;
+  padding: 2%;
+  font-family: "DM Serif Display";
+  font-size: 3.125rem;
 }
 .section-planner__text {
+  background-color: rgb(245, 245, 245);
+  color: black;
+  font-family: "Josefin Sans";
+  font-size: 3rem;
+  text-align: center;
+  padding: 2%;
 }
 .section-planner__wrap {
+  display: grid;
+  @include mixin.grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 12%;
+  justify-items: center;
 }
 .section-planner__wrap-card {
+  grid-area: 1/1/2/2;
+  max-width: auto;
+  height: auto;
+  border: 2px solid rgba(233, 230, 230, 0.781);
+  border-radius: 25px;
+  background-color: white;
+  margin-top: 4%;
+  margin-bottom: 15%;
+  padding: 6%; 
+}
+.section-planner__wrap-card2 {
+  grid-area: 1/2/2/3;
 }
 .section-planner__title_smaller {
+  font-family: "DM Serif Display";
+  font-size: 2.5rem;
+  text-align: center;  
+  color: black;
 }
 .section-planner__card-text {
+  text-align: center;
+  font-family: "Jost";
+  font-size: 1.875rem;
+  color:rgb(50, 50, 50);
+  margin-top: 7%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.section-planner__icon-container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  margin-top: 20px;
 }
 .section-planner__card-link {
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
 }
 .section-planner__icon {
+  margin-top: 10%;
+  cursor: pointer;
+  
+  
 }
