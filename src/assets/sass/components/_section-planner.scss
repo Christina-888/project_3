@@ -66,19 +66,18 @@
 }
 .section-planner__card-link {
   text-decoration: none;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
+  font-weight: bold; 
   align-items: end;
+  border: 2px solid variables.$darkgreen;
+  padding: 2% 12% 1% 15%;
+  border-radius: 25px;
   
 }
 .section-planner__icon {
   margin-top: 10%;
+  
   cursor: pointer;
   width: 3.5rem;
   height: 2.5rem;
-  border: 2px solid variables.$darkgreen;
-  padding: 2% 12% 1% 15%;
-  border-radius: 25px;
-  width: 100%;
+  
 }

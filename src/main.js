@@ -1,6 +1,7 @@
 import './style.scss'
 
 import { showPreloader } from '/src/assets/scripts/preloader'
+
 // import {setOffsetHeight} from '/src/assets/scripts/offsetHeight'
 
 
