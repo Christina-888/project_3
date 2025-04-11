@@ -1,4 +1,8 @@
 import './style.scss'
+
+import { showPreloader } from '/src/assets/scripts/preloader'
+
+
 // import javascriptLogo from './javascript.svg'
 // import viteLogo from '/vite.svg'
 // import { setupCounter } from './counter.js'
