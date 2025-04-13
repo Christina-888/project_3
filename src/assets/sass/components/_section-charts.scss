@@ -5,20 +5,58 @@
   padding: 2%;
 }
 .section-charts__title {
-  font-family: "DM Serif Display";
-  font-size: 2.5rem;
-  color: rgb(50, 50, 50);
+  font-family:  variables.$DMSerif;
+  font-size: 2.8125rem; /*45rem*/
+  color: variables.$darkgrey;
+  letter-spacing: 1px;
   text-align: center;
   padding: 4%;
 }
 .section-charts__wrap {
+  margin-top: 1.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   
 }
 .section-charts__icon {
   width: 3rem;
-
+  height: 3rem;
+  fill: variables.$darkgreen;
 }
 .section-charts__wrap-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+.section-charts__chart{
+  width: 524px;
+  height: 386px;
+  background-color: variables.$lightblue;
+  border: 2px solid rgba(233, 230, 230, 0.781);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.295);
+}
+.section-charts__img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+// effects
+
+.section-charts__icon:hover {
+  fill: variables.$darkgreen;
+  animation: gradientColor 1s infinite alternate;
+
+  @keyframes gradientColor {
+    0% {
+      fill: variables.$darkgreen;
+      stroke: none;
+    }
+    100%{
+      fill: variables.$lightgreen;
+      stroke: variables.$lightgreen;
+    }
+  }
 }

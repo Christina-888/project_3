@@ -7,6 +7,8 @@
   top: 0;
   z-index: 1000;
   width: 100%;
+  border-bottom: 2px dotted rgba(0, 0, 0, 0.151);
+
 }
 .header__wrap {
   box-sizing: border-box;
@@ -14,10 +16,8 @@
   max-height: 10.125rem; /*162px*/
   display: flex;
   justify-content: space-between;
-
   transform: translateY(-100%);
   animation: ani 1.5s forwards;
-
   @keyframes ani {
     0% {
       transform: translateY(-100%);
@@ -36,16 +36,7 @@
   display: flex;
   align-items: end;
 }
-.header__logo-link:hover > * {
-  fill: variables.$darkgreen;
-  color: variables.$darkgreen;
-  filter: drop-shadow(2px 2px 1px variables.$darkgreen-opacity);
-}
-.header__logo-link:active > * {
-  fill: variables.$lightgreen;
-  color: variables.$lightgreen;
-  filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
-}
+
 .header__logo-icon {
   width: 3.625rem; /*58px*/
   height: 3.6875rem; /*59px*/
@@ -53,7 +44,7 @@
   fill: rgba(0, 0, 0, 0.8);
 }
 .header__logo-text {
-  font-family: "DM Serif Display";
+  font-family: variables.$DMSerif;
   font-size: 2.8125rem; /*45px*/
   color: variables.$lightblack;
 }
@@ -70,7 +61,7 @@
   list-style: none;
 }
 .header__list-item {
-  font-family: "Jost";
+  font-family: variables.$Jost;
   font-size: 1.4375rem; /*23px*/
   font-weight: 350;
   padding: 0 1.25rem 0 1.25rem;
@@ -78,6 +69,27 @@
 .header__item-link {
   color: variables.$lightblack;
 }
+.header__account-icon {
+  margin-left: 1rem;
+  width: 2.5rem; /*40px*/
+  height: 2.8125rem; /*45px*/
+  fill: variables.$lightblack;
+}
+
+
+//effects
+
+.header__logo-link:hover > * {
+  fill: variables.$darkgreen;
+  color: variables.$darkgreen;
+  filter: drop-shadow(2px 2px 1px variables.$darkgreen-opacity);
+}
+.header__logo-link:active > * {
+  fill: variables.$lightgreen;
+  color: variables.$lightgreen;
+  filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
+}
+
 .header__item-link:hover {
   color: variables.$darkgreen;
   filter: drop-shadow(2px 2px 1px variables.$darkgreen-opacity);
@@ -85,12 +97,6 @@
 .header__item-link:active {
   color: variables.$lightgreen;
   filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
-}
-.header__account-icon {
-  margin-left: 1rem;
-  width: 2.5rem; /*40px*/
-  height: 2.8125rem; /*45px*/
-  fill: variables.$lightblack;
 }
 
 .header__account-icon:hover {

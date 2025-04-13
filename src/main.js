@@ -1,8 +1,10 @@
 import './style.scss'
 
 import { showPreloader } from '/src/assets/scripts/preloader'
+import { animateSplitTitle } from '/src/assets/scripts/animateSplitTitle'
+import { setOffsetHeight } from '/src/assets/scripts/offsetHeight'
+import { clickForward } from '/src/assets/scripts/chartsSlider'
 
-// import {setOffsetHeight} from '/src/assets/scripts/offsetHeight'
 
 
 // import javascriptLogo from './javascript.svg'
