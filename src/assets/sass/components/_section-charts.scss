@@ -1,15 +1,12 @@
 @use "../abstracts/mixin";
 @use "../abstracts/variables";
 
+
+//sizes and layout
 .section-charts {
   padding: 2%;
 }
 .section-charts__title {
-  font-family:  variables.$DMSerif;
-  font-size: 2.8125rem; /*45rem*/
-  color: variables.$darkgrey;
-  letter-spacing: 1px;
-  text-align: center;
   padding: 4%;
 }
 .section-charts__wrap {
@@ -17,24 +14,23 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
 }
 .section-charts__icon {
   width: 3rem;
   height: 3rem;
-  fill: variables.$darkgreen;
 }
 .section-charts__wrap-charts {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+  justify-items:center;
 }
 .section-charts__chart{
-  width: 524px;
-  height: 386px;
-  background-color: variables.$lightblue;
-  border: 2px solid rgba(233, 230, 230, 0.781);
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.295);
+  width: 32.75rem; /*524px;*/
+  height: 24.125rem; /*386px;*/
+}
+.section-charts__chart_hidden{
+  
 }
 .section-charts__img{
   width: 100%;
@@ -42,9 +38,25 @@
   object-fit: contain;
 }
 
+//styles and fonts
+.section-charts__title {
+  font-family:  variables.$DMSerif;
+  font-size: 2.8125rem; /*45rem*/
+  color: variables.$darkgrey;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.section-charts__icon {
+  fill: variables.$darkgreen;
+}
+.section-charts__chart{
+  background-color: variables.$lightblue;
+  border: 2px solid rgba(233, 230, 230, 0.781);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.295);
+}
+
 
 // effects
-
 .section-charts__icon:hover {
   fill: variables.$darkgreen;
   animation: gradientColor 1s infinite alternate;
@@ -58,5 +70,26 @@
       fill: variables.$lightgreen;
       stroke: variables.$lightgreen;
     }
+  }
+}
+
+
+@media screen and (max-width: 1250px) {
+  .section-charts__chart_hidden {
+    display: none;
+  }
+  .section-charts__chart{
+    width: 48rem;
+    height: 36rem;
+  }
+  .section-charts__wrap-charts {
+    grid-template-columns: 1fr;
+  }
+  .section-charts__wrap {
+    margin: 1.5rem 2.3rem 0 2.3rem;
+  }
+  .section-charts__icon {
+    width: 4rem;
+    height: 4rem;
   }
 }

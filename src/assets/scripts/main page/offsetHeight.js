@@ -3,11 +3,8 @@ export function setOffsetHeight() {
   document.querySelector(".container").addEventListener('click', (evt) => {
     const href = evt.target.href;
     if (evt.target.tagName === "A" && href.includes("index")) {
-      console.log("cat");
 
       const firstLetterIndex = href.indexOf("#") + 1;
-
-      console.log(firstLetterIndex);
 
       let idSection = "";
 
@@ -18,9 +15,7 @@ export function setOffsetHeight() {
       
       const section = document.getElementById(idSection);
 
-      console.log(section);
-
-      section.style.scrollMarginTop = `${document.querySelector('.header__wrap').offsetHeight / 16}rem`;
+      section.style.scrollMarginTop = `${document.querySelector('.header').offsetHeight / 16}rem`;
     
     }
   });

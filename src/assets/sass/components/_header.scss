@@ -1,21 +1,95 @@
 @use "../abstracts/mixin";
 @use "../abstracts/variables";
 
+
+
+//sizes and layout
 .header {
-  background-color: white;
+  width: 100%;
   position: fixed;
   top: 0;
   z-index: 1000;
-  width: 100%;
-  border-bottom: 2px dotted rgba(0, 0, 0, 0.151);
-
-}
-.header__wrap {
-  box-sizing: border-box;
-  @include mixin.grid;
-  max-height: 10.125rem; /*162px*/
-  display: flex;
+  padding: 2rem 5.4375rem 3.75rem 5.4375rem;
+  display:flex;
   justify-content: space-between;
+  height: 10.125rem; /*162px*/
+  display: flex;
+  align-content: center;
+  // align-items: center;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+.header__logo-link {
+  display: flex;
+  align-items: end;
+}
+.header__logo-icon {
+  width: 3.625rem; /*58px*/
+  height: 3.6875rem; /*59px*/
+  // margin-bottom: 1.625rem;
+}
+.header__logo-icon_mob{
+  display: none;
+}
+.header__wrap-nav {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+.header__nav {
+  margin-right: 1rem;
+}
+.header__nav-list {
+  display: flex;
+}
+.header__list-item {
+  align-self: end;
+  padding: 0 1.25rem 0 1.25rem;
+}
+.header__account-icon {
+  display: flex;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 2.5rem; /*40px*/
+  height: 2.8125rem; /*45px*/
+}
+
+//style and fonts
+.header {
+  background-color: white;
+  border-bottom: 2px dotted rgba(0, 0, 0, 0.151);
+}
+.header__logo-icon {
+  fill: rgba(0, 0, 0, 0.8);
+}
+.header__logo-text {
+  line-height: 0.75;
+  font-family: variables.$DMSerif;
+  font-size: 2.8125rem; /*45px*/
+  color: variables.$lightblack;
+}
+.header__nav-list {
+  list-style: none;
+}
+.header__list-item {
+  text-align: center;
+  font-family: variables.$Jost;
+  font-size: 1.4375rem; /*23px*/
+  font-weight: 300;
+}
+.header__item-link {
+  color: variables.$lightblack;
+}
+.header__account-icon {
+  fill: variables.$lightblack;
+}
+
+
+
+//effects
+.header__wrap {
   transform: translateY(-100%);
   animation: ani 1.5s forwards;
   @keyframes ani {
@@ -27,58 +101,6 @@
     }
   }
 }
-.header__logo {
-  display: flex;
-  align-items: center;
-  margin: 2rem 2rem 3.75rem 0; /*33px 59px*/
-}
-.header__logo-link {
-  display: flex;
-  align-items: end;
-}
-
-.header__logo-icon {
-  width: 3.625rem; /*58px*/
-  height: 3.6875rem; /*59px*/
-  margin-bottom: 0.625rem;
-  fill: rgba(0, 0, 0, 0.8);
-}
-.header__logo-text {
-  font-family: variables.$DMSerif;
-  font-size: 2.8125rem; /*45px*/
-  color: variables.$lightblack;
-}
-.header__wrap-nav {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-.header__nav {
-  margin-right: 1rem;
-}
-.header__nav-list {
-  display: flex;
-  list-style: none;
-}
-.header__list-item {
-  font-family: variables.$Jost;
-  font-size: 1.4375rem; /*23px*/
-  font-weight: 350;
-  padding: 0 1.25rem 0 1.25rem;
-}
-.header__item-link {
-  color: variables.$lightblack;
-}
-.header__account-icon {
-  margin-left: 1rem;
-  width: 2.5rem; /*40px*/
-  height: 2.8125rem; /*45px*/
-  fill: variables.$lightblack;
-}
-
-
-//effects
-
 .header__logo-link:hover > * {
   fill: variables.$darkgreen;
   color: variables.$darkgreen;
@@ -97,6 +119,7 @@
 .header__item-link:active {
   color: variables.$lightgreen;
   filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
+  transition: 3s;
 }
 
 .header__account-icon:hover {
@@ -108,3 +131,27 @@
   fill: variables.$lightgreen;
   filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
 }
+
+
+@media screen and (max-width: 1150px){
+  .header__wrap-nav {
+    display: none;
+  }
+}
+
+
+  // .header__logo {
+  //   margin: 3.8rem 0 3.8rem 0; /*37px 66px*/
+  // }
+  // .header__logo-icon {
+  //   display: none;
+  // }
+  // .header__logo-icon_mob {
+  //   display: flex;
+  //   width: 2.2rem; /*40px*/
+  //   height: 2.3rem;
+  //   margin-bottom: 0.4rem;    
+  // }
+  // .header__logo-text {
+  //   font-size: 2rem; 
+  // }

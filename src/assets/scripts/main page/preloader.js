@@ -17,9 +17,12 @@ export function showPreloader () {
       const preloader = document.querySelector('.container__preloader');
       preloader.style.display = 'none';
       document.querySelector('.container__wrap').style.display = 'block';
-      document.querySelector('.main').style.marginTop = `${document.querySelector('.header__wrap').offsetHeight / 16}rem`;        
+      document.querySelector('.main').style.marginTop = `${document.querySelector('.header').offsetHeight / 16}rem`;  
+      
     },1500) 
   }
 }
 showPreloader();
+
+
 

@@ -1,0 +1,133 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+
+.burger__wrap, #burger-menu {
+  display: none;
+}
+.burger__label {
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  cursor: pointer;
+  z-index: 10;
+}
+.burger__label > * {
+  width: 3.2rem;
+  height: 6px;
+  background-color: variables.$lightblack;
+  border: 1px solid variables.$lightblack;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+.burger__nav-wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  top: 0; left: 0; right: 0; bottom: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+  z-index: 5;
+}
+.burger__nav {
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+  height: 100%;
+  top: 15%;
+}
+.burger__nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.burger__list-item {
+  
+  list-style: none;
+}
+.burger__account-wrapper {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 15px;
+}
+.burger__text {
+  color: variables.$lightblack;
+  font-family: variables.$Jost;
+  font-size: 1.5rem; 
+  font-weight: 300;
+}
+.burger__account-icon {
+  width: 40px;
+  height: 45px;
+  fill: variables.$lightblack;
+}
+.burger__account-icon > * {
+  width: 40px;
+  height: 45px;
+}
+.burger__form-wrapper {
+  margin: 1.5rem;
+  text-align: center;  
+}
+.burger__form-wrapper > p > a {
+  color: variables.$blue;
+  font-weight: 400;
+} 
+
+//effects
+
+.burger__item-link:hover {
+  color: variables.$darkgreen;
+  filter: drop-shadow(2px 2px 1px variables.$darkgreen-opacity);
+}
+.burger__item-link:active{
+  color: variables.$lightgreen;
+  filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
+}
+.burger__account-icon:hover {
+  fill: variables.$darkgreen;
+  filter: drop-shadow(2px 2px 1px variables.$darkgreen-opacity);
+}
+.burger__account-icon:active {
+  fill: variables.$lightgreen;
+  filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
+}
+.burger__label:hover > *{
+  background-color: variables.$darkgreen;
+  border: 0;
+}
+.burger__label:active > *{
+  background-color: variables.$lightgreen;
+  border: 0;
+}
+
+#burger-menu:checked + .burger__label .burger__top-bun {
+  transform: rotate(-45deg);
+  margin-top: 25px;
+}
+#burger-menu:checked + .burger__label .burger__bottom-bun {
+  opacity: 0;
+  transform: rotate(45deg);
+}
+#burger-menu:checked + .burger__label .burger__meat {
+  transform: rotate(45deg);
+  margin-top: -17px;
+}
+
+#burger-menu:checked + .burger__label + .burger__nav-wrapper {
+  top: 0;
+  transform: scale(1);
+}
+
+
+
+@media screen and (max-width: 1150px){
+  .burger__wrap {
+    display: flex;
+  }
+}

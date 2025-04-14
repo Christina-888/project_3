@@ -1,13 +1,18 @@
 @use "../abstracts/mixin";
 @use "../abstracts/variables";
 
+//sizes and layout
 .aside {
-  background-color: rgb(227, 226, 226);
   display: flex;
   justify-content: center;
 }
 .aside__wrap {
   padding: 1.5rem;
+}
+
+//style and fonts
+.aside {
+  background-color: rgb(227, 226, 226);
 }
 .aside__title {
   font-family: variables.$DMSerif;
@@ -15,8 +20,11 @@
   color: variables.$darkgreen; 
   text-align: center;
   white-space: nowrap;
+}
+
+//effects
+.aside__title {
   overflow: hidden;
-  width: 40rem;
   animation: type 3.5s steps(100, end) infinite;
 }
 @keyframes type {

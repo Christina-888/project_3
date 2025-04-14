@@ -1,15 +1,18 @@
 @use "../abstracts/mixin";
 @use "../abstracts/variables";
 
+
+//sizes and layout
 .section-project {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
-  .section-project__wrap {
+.section-project__wrap {
   @include mixin.grid;
   margin-top: 7rem; /*112px*/
   display: flex;
   min-height: 300px;
+  gap: 2rem;
 }
 .section-project__questions {
   display: flex;
@@ -18,32 +21,21 @@
   gap: 2rem;
   width: 47.4%;
 }
-.section-project__subtitle {
-  font-family: variables.$DMSerif;
-  font-size: 2.8125rem; /*45px*/
-  color: variables.$darkgreen;
-}
 .section-project__info {
+  margin-left: 3.5rem;
   display: flex;
   flex-direction: column;
   width: 52.6%;
 }
-.section-project__subtitle_black {
-  color: rgba(0, 0, 0, 0.8);
-}
 .section-project__text {
   margin-top: 1.4375rem; /*23px*/
-  font-family: variables.$Jost;
-  font-size: 2.1875rem; /*35px*/
-  font-weight: 300;
+  max-width: 80%;
 }
-.section-project__wrap-item {
+.section-project__wrap-item  {
   display: flex;
-  justify-content: start;
-  align-items: center;
 }
 .section-project__wrap-item > p {
-margin-left: 1rem;
+  margin-left: 1.5rem;
 }
 .section-project__wrap-item > svg {
   margin-top: 1.3rem;
@@ -54,6 +46,22 @@ margin-left: 1rem;
 .section-project__icon {
   width: 3rem; /*48px*/
   height: 3rem; /*48px*/
+}
+
+
+//style and fonts
+.section-project__subtitle {
+  font-family: variables.$DMSerif;
+  font-size: 2.8125rem; /*45px*/
+  color: variables.$darkgreen;
+}
+.section-project__subtitle_black {
+  color: rgba(0, 0, 0, 0.8);
+}
+.section-project__text {
+  font-family: variables.$Jost;
+  font-size: 2.1875rem; /*35px*/
+  font-weight: 300;
 }
 .section-project__text_bold {
   font-weight: 500;

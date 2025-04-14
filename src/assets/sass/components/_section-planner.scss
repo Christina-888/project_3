@@ -3,31 +3,14 @@
 
 .section-planner {
   margin-top: 5.8125rem; /*93px*/  
-  background-color: rgb(245, 245, 245);
 }
 .section-planner__title-wrap {
   display: flex;
   justify-content: center;
-  background-color: variables.$darkgreen;
   padding: 2rem;
   gap: 0.5rem; 
 }
-.section-planner__title {
-  background-color: variables.$darkgreen;
-  color: variables.$darkgreen;
-  text-align: center;
-  font-family: variables.$DMSerif;
-  font-size: 3.125rem;
-  letter-spacing: 2px;
-}
-
 .section-planner__text {
-  background-color: rgb(245, 245, 245);
-  color: black;
-  font-family: variables.$JosefinSans;
-  font-weight: 350;
-  font-size: 3rem;
-  text-align: center;
   padding: 2%;
 }
 .section-planner__wrap {
@@ -39,19 +22,66 @@
   justify-items: center;
 }
 .section-planner__wrap-card {
-  grid-area: 1/1/2/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: auto;
   height: auto;
-  border: 2px solid rgba(233, 230, 230, 0.781);
-  border-radius: 25px;
-  background-color: white;
   margin-top: 4%;
   margin-bottom: 15%;
   padding: 6%; 
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.295);
 }
-.section-planner__wrap-card-2 {
-  grid-area: 1/2/2/3;
+// .section-planner__wrap-card-2 {
+//   grid-area: 1/2/2/3;
+// }
+.section-planner__card-text {
+  margin-top: 7%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.section-planner__icon-container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  margin-top: 20px;
+}
+.section-planner__card-link {
+  padding: 2% 12% 2% 15%;
+}
+.section-planner__icon {
+  display: flex; 
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+//styles and fonts
+.section-planner {
+  background-color: rgb(245, 245, 245);
+}
+.section-planner__title-wrap {
+  background-color: variables.$darkgreen;
+}
+.section-planner__title {
+  color: variables.$darkgreen;
+  text-align: center;
+  font-family: variables.$DMSerif;
+  font-size: 3.125rem;
+  letter-spacing: 2px;
+}
+.section-planner__text {
+  background-color: rgb(245, 245, 245);
+  color: black;
+  font-family: variables.$JosefinSans;
+  font-weight: 350;
+  font-size: 3rem;
+  text-align: center;
+}
+.section-planner__wrap-card {
+  border: 2px solid rgba(233, 230, 230, 0.781);
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.295);
 }
 .section-planner__title_smaller {
   font-family: variables.$DMSerif;
@@ -65,61 +95,68 @@
   font-weight: 350;
   font-size: 1.875rem;
   color:rgb(50, 50, 50);
-  margin-top: 7%;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-.section-planner__icon-container {
-  display: flex; 
-  justify-content: center; 
-  align-items: center;
-  margin-top: 20px;
 }
 .section-planner__card-link {
-  align-items: end;
   border: 3px solid variables.$darkgreen;
   background-color: white;
-  padding: 2% 12% 2% 15%;
   border-radius: 25px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 .section-planner__icon {
-  display: flex; 
-  justify-content: center;
-  cursor: pointer;
-  width: 2.5rem;
-  height: 2.5rem;
   fill: variables.$darkgreen;
 }
+
 
 
 //effects
 
 .section-planner__title {
   transform: translateX(0);
-  animation: 2s ease forwards;
-  // ANIMATION BACKGROUND-COLOR
-  // animation: colorTransition 1s infinite alternate;
-
-// @keyframes colorTransition {
-//   0% {
-//     background-color: variables.$darkgreen;
-//   }
-//   100% {
-//     background-color: variables.$lightgreen;
-//   }
-// }
-
-//ANIMATION NEON TEXT
-  // @keyframes glow {
-  //   0% {
-  //     text-shadow: 0 0 5px variables.$lightgreen, 0 0 10px variables.$lightgreen, 0 0 20px variables.$lightgreen, 0 0 40px variables.$lightgreen, 0 0 80px variables.$lightgreen;
-  //   }
-  //   100% {
-  //     text-shadow: 0 0 5px rgb(62, 146, 192), 0 0 10px rgb(62, 146, 192), 0 0 20px rgb(62, 146, 192), 0 0 40px rgb(62, 146, 192), 0 0 80px rgb(62, 146, 192);
-  //   }
-  // }
+  animation: 2s linear forwards;
 }
+
+
+  // ANIMATION BACKGROUND-COLOR
+.section-planner__title-wrap_gradient {
+  
+  
+
+  background:linear-gradient(-45deg, variables.$darkgreen, variables.$lightgreen, variables.$darkgreen, variables.$lightgreen);
+  background-size: 400% 400%;
+  // box-shadow: 0 -100px 100px -120px variables.$lightgreen inset,  0 -100px 100px -120px variables.$darkgreen inset;
+  animation: colorTransition 7s infinite ;
+
+  @keyframes colorTransition {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 50% 100%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
+  }
+}
+.section-planner__title-wrap_gradient >* {
+  color: white;
+}
+//ANIMATION NEON TEXT
+.section-planner__title_neon {
+  color: white;
+  text-shadow: 0 0 5px variables.$lightgreen, 0 0 10px variables.$lightgreen, 0 0 20px variables.$lightgreen, 0 0 40px variables.$lightgreen, 0 0 80px variables.$lightgreen;
+  animation: glow 1.5s infinite alternate;
+
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 5px rgb(118, 168, 71), 0 0 10px rgb(118, 168, 71), 0 0 20px rgb(118, 168, 71), 0 0 40px rgb(118, 168, 71), 0 0 80px rgb(118, 168, 71);
+    }
+    100% {
+      text-shadow: 0 0 5px rgb(101, 116, 86), 0 0 10px rgb(101, 116, 86), 0 0 20px rgb(101, 116, 86), 0 0 40px rgb(101, 116, 86), 0 0 80px rgb(101, 116, 86);
+    }
+  }
+}
+  
 .section-planner__title.left {
   color: white;
   transform: translateX(-200%);
@@ -156,7 +193,6 @@
 .section-planner__wrap-card:hover > .section-planner__title_smaller {
   color: variables.$darkgreen;
 }
-
 
 .section-planner__card-link {
   animation: colorTransitionBorder 1s infinite alternate;
