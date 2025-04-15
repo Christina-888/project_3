@@ -4,10 +4,8 @@
 
 //sizes and layout
 .section-project {
-  margin-top: 7rem; /*112px*/
-}
-.section-project__wrap {
   @include mixin.grid;
+  margin-top: 7rem; /*112px*/
   display: flex;
   min-height: 300px;
   gap: 2rem;
@@ -81,9 +79,12 @@
     font-size: 2.5rem;
   }
   .section-project__title {
-    font-size: 3.5rem; 
+    font-size: 3.5rem;
+    text-align: center; 
   }
-  
+  .section-project__title_black {
+    text-align: start;
+  }
 }
 
 @media screen and (max-width: 925px){
@@ -101,7 +102,7 @@
   }
 }
 @media screen and (max-width: 860px){
-  .section-project__wrap {
+  .section-project {
     flex-direction: column;
     gap: 5rem;
   }
@@ -157,8 +158,9 @@
 
 
 @media screen and (max-width: 600px) {
-  .section-project__wrap {
-    margin: 0 1.5rem 0 1.5rem;
+  .section-project {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
   .section-project__text {
     align-self: center;

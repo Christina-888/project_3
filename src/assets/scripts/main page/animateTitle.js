@@ -3,7 +3,7 @@ export function animateTitle () {
   const leftPart = document.getElementById("title-left-part");
     const rightPart = document.getElementById("title-right-part");
 
-  const scrollToPlanner = () => {
+  const splitTitle = () => {
     const sectionPlanner = document.querySelector(".section-planner");
     
     if(window.pageYOffset > sectionPlanner.offsetHeight){
@@ -13,7 +13,7 @@ export function animateTitle () {
     }  
   }
   if (window.innerWidth >= 1550) {
-    window.onscroll = scrollToPlanner;
+    window.onscroll = splitTitle;
   } else {
     document.querySelector(".section-planner__title-wrap").classList.add("section-planner__title-wrap_gradient");
     // leftPart.classList.add("section-planner__title_neon");
