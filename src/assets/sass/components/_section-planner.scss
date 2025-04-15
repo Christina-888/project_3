@@ -2,58 +2,38 @@
 @use "../abstracts/variables";
 
 .section-planner {
-  margin-top: 2%;
-  background-color: rgb(245, 245, 245);
+  margin-top: 5.8125rem; /*93px*/  
 }
-.section-planner__title {
-  background-color: variables.$darkgreen;
-  color: white;
-  text-align: center;
-  padding: 2%;
-  font-family: "DM Serif Display";
-  font-size: 3.125rem;
+.section-planner__title-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  gap: 0.5rem; 
 }
 .section-planner__text {
-  background-color: rgb(245, 245, 245);
-  color: black;
-  font-family: "Josefin Sans";
-  font-size: 3rem;
-  text-align: center;
-  padding: 2%;
+  padding: 2vh 0 3vh 0;
 }
 .section-planner__wrap {
-  display: grid;
+  display: flex;
   @include mixin.grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 12%;
+
+  gap: 5vw;
   justify-items: center;
 }
 .section-planner__wrap-card {
-  grid-area: 1/1/2/2;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: auto;
   height: auto;
-  border: 2px solid rgba(233, 230, 230, 0.781);
-  border-radius: 25px;
-  background-color: white;
-  margin-top: 4%;
-  margin-bottom: 15%;
-  padding: 6%; 
+  margin-bottom: 5vh;
+  padding: 3rem; 
 }
-.section-planner__wrap-card-2 {
-  grid-area: 1/2/2/3;
-}
-.section-planner__title_smaller {
-  font-family: "DM Serif Display";
-  font-size: 2.5rem;
-  text-align: center;  
-  color: black;
-}
+// .section-planner__wrap-card-2 {
+//   grid-area: 1/2/2/3;
+// }
 .section-planner__card-text {
-  text-align: center;
-  font-family: "Jost";
-  font-size: 1.875rem;
-  color:rgb(50, 50, 50);
   margin-top: 7%;
   padding-left: 5%;
   padding-right: 5%;
@@ -65,19 +45,246 @@
   margin-top: 20px;
 }
 .section-planner__card-link {
-  text-decoration: none;
-  font-weight: bold; 
-  align-items: end;
-  border: 2px solid variables.$darkgreen;
-  padding: 2% 12% 1% 15%;
-  border-radius: 25px;
-  
+  padding: 2% 12% 2% 15%;
 }
 .section-planner__icon {
-  margin-top: 10%;
-  
-  cursor: pointer;
-  width: 3.5rem;
+  display: flex; 
+  justify-content: center;
+  width: 2.5rem;
   height: 2.5rem;
+}
+
+//styles and fonts
+.section-planner {
+  background-color: rgb(245, 245, 245);
+}
+.section-planner__title-wrap {
+  background-color: variables.$darkgreen;
+}
+.section-planner__title {
+  color: variables.$darkgreen;
+  text-align: center;
+  font-family: variables.$DMSerif;
+  font-size: 3.125rem;
+  letter-spacing: 2px;
+}
+.section-planner__text {
+  background-color: rgb(245, 245, 245);
+  color: black;
+  font-family: variables.$JosefinSans;
+  font-weight: 350;
+  font-size: 3rem;
+  text-align: center;
+}
+.section-planner__wrap-card {
+  border: 2px solid rgba(233, 230, 230, 0.781);
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.295);
+}
+.section-planner__title_smaller {
+  font-family: variables.$DMSerif;
+  font-size: 2.5rem;
+  text-align: center;  
+  color: black;
+}
+.section-planner__card-text {
+  text-align: center;
+  font-family: variables.$Jost;
+  font-weight: 350;
+  font-size: 1.875rem;
+  color:rgb(50, 50, 50);
+}
+.section-planner__card-link {
+  border: 3px solid variables.$darkgreen;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.section-planner__icon {
+  fill: variables.$darkgreen;
+}
+
+
+
+//effects
+
+.section-planner__title {
+  transform: translateX(0);
+  animation: 0.5s linear forwards;
+}
+
+
+  // ANIMATION BACKGROUND-COLOR
+.section-planner__title-wrap_gradient {
+
+  background:linear-gradient(-45deg, variables.$darkgreen, variables.$lightgreen, variables.$darkgreen, variables.$lightgreen);
+  background-size: 400% 400%;
+  // box-shadow: 0 -100px 100px -120px variables.$lightgreen inset,  0 -100px 100px -120px variables.$darkgreen inset;
+  animation: colorTransition 7s infinite ;
+
+  @keyframes colorTransition {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 50% 100%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
+  }
+}
+.section-planner__title-wrap_gradient >* {
+  color: white;
+}
+//ANIMATION NEON TEXT
+.section-planner__title_neon {
+  color: white;
+  text-shadow: 0 0 5px variables.$lightgreen, 0 0 10px variables.$lightgreen, 0 0 20px variables.$lightgreen, 0 0 40px variables.$lightgreen, 0 0 80px variables.$lightgreen;
+  animation: glow 1.5s infinite alternate;
+
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 5px rgb(118, 168, 71), 0 0 10px rgb(118, 168, 71), 0 0 20px rgb(118, 168, 71), 0 0 40px rgb(118, 168, 71), 0 0 80px rgb(118, 168, 71);
+    }
+    100% {
+      text-shadow: 0 0 5px rgb(101, 116, 86), 0 0 10px rgb(101, 116, 86), 0 0 20px rgb(101, 116, 86), 0 0 40px rgb(101, 116, 86), 0 0 80px rgb(101, 116, 86);
+    }
+  }
+}
   
+.section-planner__title.left {
+  color: white;
+  transform: translateX(-200%);
+  animation-name: slide-in-left;
+}
+
+.section-planner__title.right {
+  color: white;
+  transform: translateX(200%);
+  animation-name: slide-in-right;
+}
+
+@keyframes slide-in-left {
+  0% {
+      transform: translateX(-200%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+      transform: translateX(200%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.section-planner__wrap-card:hover {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+.section-planner__wrap-card:hover > .section-planner__title_smaller {
+  color: variables.$darkgreen;
+}
+
+.section-planner__card-link {
+  animation: colorTransitionBorder 1s infinite alternate;
+}
+@keyframes colorTransitionBorder {
+  0% {
+    border-color: variables.$darkgreen;
+  }
+  100% {
+    border-color: variables.$lightgreen;
+  }
+}
+.section-planner__icon {
+  animation: colorTransitionArrow 1s infinite alternate;
+}
+@keyframes colorTransitionArrow {
+  0% {
+    fill: variables.$darkgreen;
+    stroke: none;
+  }
+  100% {
+    fill: variables.$lightgreen;
+    
+  }
+}
+
+.section-planner__card-link:hover {
+  background-color: variables.$darkgreen;
+  animation: colorTransitionLink 0.8s infinite alternate;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+@keyframes colorTransitionLink {
+  0% {
+    border-color: variables.$darkgreen;
+    background-color: variables.$darkgreen;
+  }
+  100% {
+    border-color: variables.$lightgreen;
+    background-color: variables.$lightgreen;
+  }
+}
+.section-planner__card-link:hover > .section-planner__icon {
+  fill: white;
+  animation: none;
+  filter: drop-shadow(2px 2px 1px variables.$darkgreen-opacity);
+}
+
+.section-planner__card-link:active {
+  background-color: variables.$lightgreen;
+  border: variables.$lightgreen;
+  animation: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.5s ;
+  opacity: 0.4;
+}
+
+.section-planner__card-link:active > .section-planner__icon {
+  fill: white;
+  animation: none;
+  filter: drop-shadow(2px 2px 25px rgba(0, 0, 0, 0.8));
+}
+
+
+@media screen and (min-width: 2000px){
+  .section-planner__title {
+    font-size: 4.5rem;
+  }
+  .section-planner__card-text {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 1010px) {
+  .section-planner__wrap {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .section-planner__wrap-card {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+  .section-planner__text {
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section-planner__title-wrap {
+    flex-direction: column;
+  }
+  .section-planner__wrap {
+    margin: 0 1.5rem 0 1.5rem;
+  }
+  .section-planner__text {
+    font-size: 2.5rem;
+  }
 }

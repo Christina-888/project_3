@@ -1,23 +1,94 @@
 @use "../abstracts/mixin";
 @use "../abstracts/variables";
 
+
+
+//sizes and layout
 .header {
-  background-color: white;
+  width: 100%;
   position: fixed;
   top: 0;
   z-index: 1000;
-  width: 100%;
-}
-.header__wrap {
-  box-sizing: border-box;
-  @include mixin.grid;
-  max-height: 10.125rem; /*162px*/
+  padding: 2rem 5.4375rem 3.75rem 5.4375rem;
   display: flex;
   justify-content: space-between;
+  height: 10.125rem; /*162px*/
+  display: flex;
+  align-content: center;
+  // align-items: center;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+.header__logo-link {
+  display: flex;
+  align-items: end;
+}
+.header__logo-icon {
+  width: 3.625rem; /*58px*/
+  height: 3.6875rem; /*59px*/
+  // margin-bottom: 1.625rem;
+}
+.header__wrap-nav {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+.header__nav {
+  margin-right: 1rem;
+}
+.header__nav-list {
+  display: flex;
+}
+.header__list-item {
+  align-self: end;
+  padding: 0 1.25rem 0 1.25rem;
+}
+.header__account-icon {
+  display: flex;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 2.5rem; /*40px*/
+  height: 2.8125rem; /*45px*/
+}
 
+//style and fonts
+.header {
+  background-color: white;
+  border-bottom: 2px dotted rgba(0, 0, 0, 0.151);
+}
+.header__logo-icon {
+  fill: rgba(0, 0, 0, 0.8);
+}
+.header__logo-text {
+  line-height: 0.75;
+  font-family: variables.$DMSerif;
+  font-size: 2.8125rem; /*45px*/
+  color: variables.$lightblack;
+}
+.header__nav-list {
+  list-style: none;
+}
+.header__list-item {
+  text-align: center;
+  font-family: variables.$Jost;
+  font-size: 1.4375rem; /*23px*/
+  font-weight: 300;
+}
+.header__item-link {
+  color: variables.$lightblack;
+}
+.header__account-icon {
+  fill: variables.$lightblack;
+}
+
+
+
+//effects
+.header__wrap {
   transform: translateY(-100%);
   animation: ani 1.5s forwards;
-
   @keyframes ani {
     0% {
       transform: translateY(-100%);
@@ -26,15 +97,6 @@
       transform: translateY(0);
     }
   }
-}
-.header__logo {
-  display: flex;
-  align-items: center;
-  margin: 2rem 2rem 3.75rem 0; /*33px 59px*/
-}
-.header__logo-link {
-  display: flex;
-  align-items: end;
 }
 .header__logo-link:hover > * {
   fill: variables.$darkgreen;
@@ -46,38 +108,7 @@
   color: variables.$lightgreen;
   filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
 }
-.header__logo-icon {
-  width: 3.625rem; /*58px*/
-  height: 3.6875rem; /*59px*/
-  margin-bottom: 0.625rem;
-  fill: rgba(0, 0, 0, 0.8);
-}
-.header__logo-text {
-  font-family: "DM Serif Display";
-  font-size: 2.8125rem; /*45px*/
-  color: variables.$lightblack;
-}
-.header__wrap-nav {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-.header__nav {
-  margin-right: 1rem;
-}
-.header__nav-list {
-  display: flex;
-  list-style: none;
-}
-.header__list-item {
-  font-family: "Jost";
-  font-size: 1.4375rem; /*23px*/
-  font-weight: 350;
-  padding: 0 1.25rem 0 1.25rem;
-}
-.header__item-link {
-  color: variables.$lightblack;
-}
+
 .header__item-link:hover {
   color: variables.$darkgreen;
   filter: drop-shadow(2px 2px 1px variables.$darkgreen-opacity);
@@ -85,12 +116,7 @@
 .header__item-link:active {
   color: variables.$lightgreen;
   filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
-}
-.header__account-icon {
-  margin-left: 1rem;
-  width: 2.5rem; /*40px*/
-  height: 2.8125rem; /*45px*/
-  fill: variables.$lightblack;
+  transition: 3s;
 }
 
 .header__account-icon:hover {
@@ -101,4 +127,41 @@
 .header__account-icon:active {
   fill: variables.$lightgreen;
   filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
+}
+
+@media screen and (min-width: 2000px){
+  .header__list-item {
+    
+    font-size: 2rem; /*23px*/
+  }
+}
+
+@media screen and (max-width: 1150px){
+  .header__wrap-nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .header {
+    padding: 2rem 1.5rem 3.75rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .header {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 1rem;
+    box-sizing: border-box;
+    width: calc(100% - 1rem);
+    // padding-right: 0;
+  }
+  .header__logo-icon{
+    display: none;
+  }
+  .header__logo {
+    align-items: end;
+  }
+  
 }

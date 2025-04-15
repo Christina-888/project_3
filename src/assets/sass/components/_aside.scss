@@ -1,13 +1,59 @@
 @use "../abstracts/mixin";
 @use "../abstracts/variables";
 
+//sizes and layout
+.aside {
+  display: flex;
+  justify-content: center;
+}
+.aside__title {
+  padding: 2vh;
+}
+
+//style and fonts
 .aside {
   background-color: rgb(227, 226, 226);
 }
 .aside__title {
-  font-family: "DM Serif Display";
+  font-family: variables.$DMSerif;
   font-size: 3.125rem;
   color: variables.$darkgreen; 
   text-align: center;
-  padding: 3%;
+  white-space: nowrap;
+}
+
+//effects
+.aside__title {
+  overflow: hidden;
+  animation: type 3.5s steps(100, end) infinite;
+}
+@keyframes type {
+  0%{
+    width: 0;
+  }
+  100%{
+    border-right: none;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 2000px){
+  .aside__title {
+    font-size: 4.5rem; 
+  }
+}
+@media screen and (max-width: 700px) {
+  .aside__title {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  .aside__title {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 440px) {
+  .aside__title {
+    font-size: 1.7rem;
+  }
 }
