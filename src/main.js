@@ -1,9 +1,13 @@
-import './style.scss'
+import "./style.scss";
 
-import { showPreloader } from '/src/assets/scripts/preloader'
+import { showPreloader } from "/src/assets/scripts/preloader";
+import { initializeModal } from "./assets/scripts/modal.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+  initializeModal();
+});
 
 // import {setOffsetHeight} from '/src/assets/scripts/offsetHeight'
-
 
 // import javascriptLogo from './javascript.svg'
 // import viteLogo from '/vite.svg'

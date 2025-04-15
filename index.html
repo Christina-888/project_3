@@ -63,6 +63,20 @@
             <svg class="header__account-icon">
               <use xlink:href="./src/assets/icons/sprite.svg#user"></use>
             </svg>
+            <div class="modal" id="logIn-modal">
+              <div class="modal__content">
+                <button class="modal__close" id="close-modal">&times;</button>
+                <h2 class="modal__title">Log in to your account</h2>
+                <form class="modal__form">
+                  <input type="email" id="email" name="email" placeholder="Email" required>
+                  <input type="password" id="password" name="password" placeholder="Password" required>
+                  <input type="checkbox" id="remember-me" name="remember-me">Remember me
+                  <button type="submit" class="modal__submit">Sign In</button>
+                  <h3 class="modal__text">Don't have an account?</h3>
+                  <a href="index.html#home" class="modal__link">Sign up now</a>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </header>
