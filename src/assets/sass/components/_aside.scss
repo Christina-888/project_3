@@ -6,8 +6,8 @@
   display: flex;
   justify-content: center;
 }
-.aside__wrap {
-  padding: 1.5rem;
+.aside__title {
+  padding: 2vh;
 }
 
 //style and fonts
@@ -34,5 +34,26 @@
   100%{
     border-right: none;
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 2000px){
+  .aside__title {
+    font-size: 4.5rem; 
+  }
+}
+@media screen and (max-width: 700px) {
+  .aside__title {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  .aside__title {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 440px) {
+  .aside__title {
+    font-size: 1.7rem;
   }
 }

@@ -2,16 +2,16 @@
 @use "../abstracts/variables";
 
 .footer {
-  margin-top: 7.5rem;/*120px*/
+  margin-top: 10%;
 }
 .footer__wrap {
   @include mixin.grid;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 3.75rem 0 3.75rem 0; /*60px*/
 }
 .footer__logo {
-  margin: 3.75rem 0 3.75rem 0; /*60px*/
   display: flex;
   align-items: center;
 }
@@ -107,15 +107,10 @@
   .footer__text {
     font-size: 1.675rem;
   }
-  // .footer__socials-icon {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   width: 3.5rem;
-  //   height: 3.75rem;
-  // }
-  // .footer__socials-link:last-child>* {
-  //   width: 2rem;
-  //   height: 2rem;
-  // }
+}
+@media screen and (max-width: 1120px){
+  .footer__wrap {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }

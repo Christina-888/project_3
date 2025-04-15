@@ -36,7 +36,7 @@
   overflow: hidden;
   overflow-y: auto;
   height: 100%;
-  top: 15%;
+  top: 10rem;
 }
 .burger__nav-list {
   display: flex;
@@ -129,5 +129,15 @@
 @media screen and (max-width: 1150px){
   .burger__wrap {
     display: flex;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .burger__label > * {
+    width: 3rem;
+    height: 5px;
+  }
+  .burger__label {
+    gap: 0.55rem;
   }
 }

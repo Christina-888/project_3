@@ -6,7 +6,7 @@ import { setOffsetHeight } from '/src/assets/scripts/main page/offsetHeight'
 import { clickForward } from '/src/assets/scripts/main page/chartsCarousel'
 import { hideNav } from '/src/assets/scripts/main page/burger'
 
-import { changeSizes } from '/src/assets/scripts/main page/svg'
+
 
 
 

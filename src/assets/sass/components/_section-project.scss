@@ -4,12 +4,10 @@
 
 //sizes and layout
 .section-project {
-  display: flex;
-  flex-direction: column;
+  margin-top: 7rem; /*112px*/
 }
 .section-project__wrap {
   @include mixin.grid;
-  margin-top: 7rem; /*112px*/
   display: flex;
   min-height: 300px;
   gap: 2rem;
@@ -20,6 +18,9 @@
   justify-content: space-between;
   gap: 2rem;
   width: 47.4%;
+}
+.section-project__arrow {
+  display: none;
 }
 .section-project__info {
   margin-left: 3.5rem;
@@ -50,12 +51,12 @@
 
 
 //style and fonts
-.section-project__subtitle {
+.section-project__title {
   font-family: variables.$DMSerif;
   font-size: 2.8125rem; /*45px*/
   color: variables.$darkgreen;
 }
-.section-project__subtitle_black {
+.section-project__title_black {
   color: rgba(0, 0, 0, 0.8);
 }
 .section-project__text {
@@ -65,4 +66,101 @@
 }
 .section-project__text_bold {
   font-weight: 500;
+}
+
+
+@media screen and (min-width: 2000px){
+  .section-project__questions {
+    align-items: center;
+  }
+  .section-project__info {
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .section-project__text {
+    font-size: 2.5rem;
+  }
+  .section-project__title {
+    font-size: 3.5rem; 
+  }
+  
+}
+
+@media screen and (max-width: 925px){
+  .section-project__subtitle {
+    font-size: 2.5rem; /*45px*/
+  }
+  .section-project {
+    margin-top: 5rem; 
+  }
+  .section-project__text {
+    font-size: 1.875rem; 
+  }
+  .section-project__info{
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 860px){
+  .section-project__wrap {
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .section-project__questions, .section-project__info {
+    width: 100%;
+  }
+  
+  .section-project__title {
+    text-align: center;
+  }
+  .section-project__arrow {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    padding:  2% 15% 2% 15%;
+    
+
+    border: 3px solid variables.$darkgreen;
+    fill: variables.$darkgreen;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+    animation: colorTransitionBorder 1s infinite alternate;
+
+    @keyframes colorTransitionBorder {
+      0% {
+        border-color: variables.$darkgreen;
+      }
+      100% {
+        border-color: variables.$lightgreen;
+      }
+    }
+  }
+  .section-project__arrow > svg {
+    transform: rotate(90deg);
+  }
+  .section-project__arrow-icon {
+    width: 40px;
+    height: 40px;
+    animation: colorTransitionArrow 1s infinite alternate;
+  }
+  @keyframes colorTransitionArrow {
+    0% {
+      fill: variables.$darkgreen;
+      stroke: none;
+    }
+    100% {
+      fill: variables.$lightgreen;
+      
+    }
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .section-project__wrap {
+    margin: 0 1.5rem 0 1.5rem;
+  }
+  .section-project__text {
+    align-self: center;
+  }
 }
