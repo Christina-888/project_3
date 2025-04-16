@@ -99,39 +99,33 @@
   }
 }
 .header__logo-link:hover > * {
-  fill: variables.$darkgreen;
-  color: variables.$darkgreen;
-  filter: drop-shadow(2px 2px 1px variables.$darkgreen-opacity);
+  @include mixin.hover-black-icon;
+  @include mixin.hover-black-text;
 }
 .header__logo-link:active > * {
-  fill: variables.$lightgreen;
-  color: variables.$lightgreen;
-  filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
+  @include mixin.active-black-icon;
+  @include mixin.active-black-text;
 }
 
 .header__item-link:hover {
-  color: variables.$darkgreen;
-  filter: drop-shadow(2px 2px 1px variables.$darkgreen-opacity);
+  @include mixin.hover-black-text;
 }
 .header__item-link:active {
-  color: variables.$lightgreen;
-  filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
-  transition: 3s;
+  @include mixin.active-black-text;
 }
 
 .header__account-icon:hover {
-  fill: variables.$darkgreen;
-  filter: drop-shadow(2px 2px 1px variables.$darkgreen-opacity);
+  @include mixin.hover-black-icon; 
 }
 
 .header__account-icon:active {
-  fill: variables.$lightgreen;
-  filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
+  @include mixin.active-black-icon;
 }
 
+
+//AWD
 @media screen and (min-width: 2000px){
   .header__list-item {
-    
     font-size: 2rem; /*23px*/
   }
 }

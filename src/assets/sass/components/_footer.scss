@@ -99,10 +99,11 @@
 }
 
 .footer__socials-icon:hover > * {
-  filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
+  @include mixin.hover-white-icon;
 }
 
 
+//AWD
 @media screen and (max-width: 1120px){
   .footer__text {
     font-size: 1.675rem;

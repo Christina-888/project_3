@@ -64,22 +64,11 @@
 
 // effects
 .section-charts__icon:hover {
-  fill: variables.$darkgreen;
-  animation: gradientColor 1s infinite alternate;
-
-  @keyframes gradientColor {
-    0% {
-      fill: variables.$darkgreen;
-      stroke: none;
-    }
-    100%{
-      fill: variables.$lightgreen;
-      stroke: variables.$lightgreen;
-    }
-  }
+  @include mixin.flashingArrows;
 }
 
 
+//AWD
 @media screen and (min-width: 2000px){
   .section-charts__title {
     font-size: 4rem; 

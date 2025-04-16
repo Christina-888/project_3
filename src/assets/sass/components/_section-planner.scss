@@ -16,7 +16,6 @@
 .section-planner__wrap {
   display: flex;
   @include mixin.grid;
-
   gap: 5vw;
   justify-items: center;
 }
@@ -30,9 +29,7 @@
   margin-bottom: 5vh;
   padding: 3rem; 
 }
-// .section-planner__wrap-card-2 {
-//   grid-area: 1/2/2/3;
-// }
+
 .section-planner__card-text {
   margin-top: 7%;
   padding-left: 5%;
@@ -67,6 +64,7 @@
   font-family: variables.$DMSerif;
   font-size: 3.125rem;
   letter-spacing: 2px;
+  color: white;
 }
 .section-planner__text {
   background-color: rgb(245, 245, 245);
@@ -117,72 +115,14 @@
 
   // ANIMATION BACKGROUND-COLOR
 .section-planner__title-wrap_gradient {
-
-  background:linear-gradient(-45deg, variables.$darkgreen, variables.$lightgreen, variables.$darkgreen, variables.$lightgreen);
-  background-size: 400% 400%;
-  // box-shadow: 0 -100px 100px -120px variables.$lightgreen inset,  0 -100px 100px -120px variables.$darkgreen inset;
-  animation: colorTransition 7s infinite ;
-
-  @keyframes colorTransition {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 50% 100%;
-    }
-    100% {
-      background-position: 100% 0%;
-    }
-  }
+  @include mixin.colorTransition;
 }
-.section-planner__title-wrap_gradient >* {
-  color: white;
-}
+
 //ANIMATION NEON TEXT
 .section-planner__title_neon {
-  color: white;
-  text-shadow: 0 0 5px variables.$lightgreen, 0 0 10px variables.$lightgreen, 0 0 20px variables.$lightgreen, 0 0 40px variables.$lightgreen, 0 0 80px variables.$lightgreen;
-  animation: glow 1.5s infinite alternate;
-
-  @keyframes glow {
-    0% {
-      text-shadow: 0 0 5px rgb(118, 168, 71), 0 0 10px rgb(118, 168, 71), 0 0 20px rgb(118, 168, 71), 0 0 40px rgb(118, 168, 71), 0 0 80px rgb(118, 168, 71);
-    }
-    100% {
-      text-shadow: 0 0 5px rgb(101, 116, 86), 0 0 10px rgb(101, 116, 86), 0 0 20px rgb(101, 116, 86), 0 0 40px rgb(101, 116, 86), 0 0 80px rgb(101, 116, 86);
-    }
-  }
+  @include mixin.neonText;
 }
   
-.section-planner__title.left {
-  color: white;
-  transform: translateX(-200%);
-  animation-name: slide-in-left;
-}
-
-.section-planner__title.right {
-  color: white;
-  transform: translateX(200%);
-  animation-name: slide-in-right;
-}
-
-@keyframes slide-in-left {
-  0% {
-      transform: translateX(-200%);
-  }
-  100% {
-      transform: translateX(0);
-  }
-}
-
-@keyframes slide-in-right {
-  0% {
-      transform: translateX(200%);
-  }
-  100% {
-      transform: translateX(0);
-  }
-}
 
 .section-planner__wrap-card:hover {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
@@ -192,28 +132,10 @@
 }
 
 .section-planner__card-link {
-  animation: colorTransitionBorder 1s infinite alternate;
-}
-@keyframes colorTransitionBorder {
-  0% {
-    border-color: variables.$darkgreen;
-  }
-  100% {
-    border-color: variables.$lightgreen;
-  }
+  @include mixin.flashingBorder;
 }
 .section-planner__icon {
-  animation: colorTransitionArrow 1s infinite alternate;
-}
-@keyframes colorTransitionArrow {
-  0% {
-    fill: variables.$darkgreen;
-    stroke: none;
-  }
-  100% {
-    fill: variables.$lightgreen;
-    
-  }
+  @include mixin.flashingArrows;
 }
 
 .section-planner__card-link:hover {

@@ -82,20 +82,17 @@
 //effects
 
 .burger__item-link:hover {
-  color: variables.$darkgreen;
-  filter: drop-shadow(2px 2px 1px variables.$darkgreen-opacity);
+  @include mixin.hover-black-text;
 }
 .burger__item-link:active{
-  color: variables.$lightgreen;
-  filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
+  @include mixin.active-black-text;
 }
 .burger__account-icon:hover {
-  fill: variables.$darkgreen;
-  filter: drop-shadow(2px 2px 1px variables.$darkgreen-opacity);
+  @include mixin.hover-black-icon; 
+
 }
 .burger__account-icon:active {
-  fill: variables.$lightgreen;
-  filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
+  @include mixin.active-black-icon;
 }
 .burger__label:hover > *{
   background-color: variables.$darkgreen;
@@ -125,7 +122,7 @@
 }
 
 
-
+//AWD
 @media screen and (max-width: 1150px){
   .burger__wrap {
     display: flex;

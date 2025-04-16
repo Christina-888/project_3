@@ -8,3 +8,92 @@
 @mixin grid {
   margin: 0 5.4375rem 0 5.4375rem; /*87px*/
 }
+
+
+//icon effects
+@mixin hover-white-icon {
+  filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
+}
+
+@mixin hover-black-icon {
+  fill: variables.$darkgreen;
+  filter: drop-shadow(2px 2px 1px variables.$darkgreen-opacity);
+}
+
+@mixin active-black-icon {
+  fill: variables.$lightgreen;
+  filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
+}
+
+//text-link effects
+@mixin hover-black-text {
+  color: variables.$darkgreen;
+  filter: drop-shadow(2px 2px 1px variables.$darkgreen-opacity);
+}
+
+@mixin active-black-text {
+  color: variables.$lightgreen;
+  filter: drop-shadow(2px 2px 1px variables.$lightgreen-opacity);
+}
+
+//ANIMATION
+//background effect
+@mixin colorTransition {
+  background:linear-gradient(-45deg, variables.$darkgreen, variables.$lightgreen, variables.$darkgreen, variables.$lightgreen);
+  background-size: 400% 400%;
+  animation: colorTransition 7s infinite ;
+
+  @keyframes colorTransition {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 50% 100%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
+  }
+}
+
+@mixin neonText {
+  color: white;
+  text-shadow: 0 0 5px variables.$lightgreen, 0 0 10px variables.$lightgreen, 0 0 20px variables.$lightgreen, 0 0 40px variables.$lightgreen, 0 0 80px variables.$lightgreen;
+  animation: glow 1.5s infinite alternate;
+
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 5px rgb(118, 168, 71), 0 0 10px rgb(118, 168, 71), 0 0 20px rgb(118, 168, 71), 0 0 40px rgb(118, 168, 71), 0 0 80px rgb(118, 168, 71);
+    }
+    100% {
+      text-shadow: 0 0 5px rgb(101, 116, 86), 0 0 10px rgb(101, 116, 86), 0 0 20px rgb(101, 116, 86), 0 0 40px rgb(101, 116, 86), 0 0 80px rgb(101, 116, 86);
+    }
+  }
+}
+
+@mixin flashingArrows {
+  animation: gradientColor 1s infinite alternate;
+
+  @keyframes gradientColor {
+    0% {
+      fill: variables.$darkgreen;
+      stroke: none;
+    }
+    100%{
+      fill: variables.$lightgreen;
+      stroke: variables.$lightgreen;
+    }
+  }
+}
+
+@mixin flashingBorder {
+  animation: colorTransitionBorder 1s infinite alternate;
+  @keyframes colorTransitionBorder {
+    0% {
+      border-color: variables.$darkgreen;
+    }
+    100% {
+      border-color: variables.$lightgreen;
+    }
+  }
+}

@@ -94,7 +94,11 @@ font-weight: 350;
   margin-top: 10px;
   cursor: pointer;
   &:hover {
-    background-color: #557755;
+    background-color: variables.$lightgreen;
+  }
+  &:active {
+    background-color: white;
+    color: variables.$lightgreen;
   }
 }
 .modal__text {

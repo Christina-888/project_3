@@ -19,6 +19,14 @@
 }
 .section-project__arrow {
   display: none;
+  align-self: center;
+  justify-content: center;
+  padding:  2% 15% 2% 15%;
+  
+  border: 3px solid variables.$darkgreen;
+  fill: variables.$darkgreen;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 .section-project__info {
   margin-left: 3.5rem;
@@ -65,8 +73,19 @@
 .section-project__text_bold {
   font-weight: 500;
 }
+.section-project__arrow {
+  border: 3px solid variables.$darkgreen;
+  fill: variables.$darkgreen;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
 
+//effects 
+.section-project__arrow {
+  @include mixin.flashingBorder;
+}
 
+//AWD
 @media screen and (min-width: 2000px){
   .section-project__questions {
     align-items: center;
@@ -109,32 +128,11 @@
   .section-project__questions, .section-project__info {
     width: 100%;
   }
-  
   .section-project__title {
     text-align: center;
   }
   .section-project__arrow {
-    align-self: center;
     display: flex;
-    justify-content: center;
-    padding:  2% 15% 2% 15%;
-    
-
-    border: 3px solid variables.$darkgreen;
-    fill: variables.$darkgreen;
-    border-radius: 25px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-
-    animation: colorTransitionBorder 1s infinite alternate;
-
-    @keyframes colorTransitionBorder {
-      0% {
-        border-color: variables.$darkgreen;
-      }
-      100% {
-        border-color: variables.$lightgreen;
-      }
-    }
   }
   .section-project__arrow > svg {
     transform: rotate(90deg);
@@ -142,20 +140,9 @@
   .section-project__arrow-icon {
     width: 40px;
     height: 40px;
-    animation: colorTransitionArrow 1s infinite alternate;
-  }
-  @keyframes colorTransitionArrow {
-    0% {
-      fill: variables.$darkgreen;
-      stroke: none;
-    }
-    100% {
-      fill: variables.$lightgreen;
-      
-    }
+    @include mixin.flashingArrows;
   }
 }
-
 
 @media screen and (max-width: 600px) {
   .section-project {
