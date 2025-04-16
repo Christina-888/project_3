@@ -18,7 +18,7 @@
   background-color: variables.$lightblack;
   border: 1px solid variables.$lightblack;
   border-radius: 15px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 .burger__nav-wrapper {
   position: fixed;
@@ -27,7 +27,7 @@
   background-color: white;
   top: 0; left: 0; right: 0; bottom: 0;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
   transform: scale(0);
   z-index: 5;
 }

@@ -28,22 +28,7 @@
               <use xlink:href="./src/assets/icons/sprite.svg#logo_icon"></use>
             </svg>
 
-            <div class="modal" id="logIn-modal">
-              <div class="modal__content">
-                <button class="modal__close" id="close-modal">&times;</button>
-                <h2 class="modal__title">Log in to your account</h2>
-                <form class="modal__form">
-                  <input type="email" id="email" name="email" placeholder="Email" required>
-                  <input type="password" id="password" name="password" placeholder="Password" required>
-                  <input type="checkbox" id="remember-me" name="remember-me">Remember me
-                  <button type="submit" class="modal__submit">Sign In</button>
-                  <h3 class="modal__text">Don't have an account?</h3>
-                  <a href="index.html#home" class="modal__link">Sign up now</a>
-                </form>
-              </div>
-            </div>
-          </div>
-=======
+        
             <p class="header__logo-text">LFPlanner</p>
           </a>
 
@@ -82,6 +67,32 @@
           </svg>
         </div>
 
+        <!-- modal -->
+        <div class="modal" id="logIn-modal">
+          <div class="modal__wrap">
+            <button class="modal__close-btn" id="close-modal"><img class="modal__close-btn" src="./src/assets/icons/btn_close.svg" /></button>
+            <div class="modal__content">
+              
+              <h2 class="modal__title">Log in to your account</h2>
+              <form class="modal__form">
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <label for="password"></label>
+                <input type="password" id="pass" name="password" placeholder="Password" required>
+                <div class="modal__checkbox-wrap">
+                  <label class="modal__checkbox" for="remember-me">Remember me</label>
+                  <input type="checkbox" id="remember-me" name="remember-me">
+                </div>
+                
+                <button type="submit" class="modal__submit">Sign In</button>
+                <h3 class="modal__text">Don't have an account?</h3>
+                <a href="index.html#home" class="modal__link">Sign up now</a>
+              </form>
+            </div>
+          </div>
+          
+        </div>
+
         <!-- burger menu -->
         <div class="burger__wrap">
             <input id="burger-menu" type="checkbox"></input>
@@ -114,7 +125,8 @@
               </div>
              
             </div>
-          </div>
+        </div>
+
       
       </header>
 
@@ -201,11 +213,11 @@
         </section>
 
         <section class="section-planner" id="planner">
-          <div class="section-planner__title-wrap">
-            <h2 class="section-planner__title" id="title-left-part">
+          <div class="section-planner__title-wrap section-planner__title-wrap_gradient">
+            <h2 class="section-planner__title">
               Let's try
             </h2>
-            <h2 class="section-planner__title" id="title-right-part">
+            <h2 class="section-planner__title">
               LFPlanner!
             </h2>
           </div>
@@ -301,7 +313,7 @@
           <div class="footer__logo">
             <a class="footer__logo-link" href="index.html#home">
               <svg class="footer__logo-icon">
-                <use xlink:href="./src/assets/icons/sprite.svg#logo_icon"></use>
+                <use xlink:href="/src/assets/icons/sprite.svg#logo-icon"></use>
               </svg>
               <p class="footer__logo-text">LFPlanner</p>
             </a>

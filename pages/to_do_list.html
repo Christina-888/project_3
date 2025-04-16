@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="./src/assets/icons/logo.svg"
+      href="/src/assets/icons/logo.svg"
       type="image/svg"
     />
     <title>LFPlanner</title>
@@ -55,6 +55,32 @@
         </svg>
       </div>
 
+      <!-- modal -->
+      <div class="modal" id="logIn-modal">
+        <div class="modal__wrap">
+          <button class="modal__close-btn" id="close-modal"><img class="modal__close-btn" src="/src/assets/icons/btn_close.svg" /></button>
+          <div class="modal__content">
+            
+            <h2 class="modal__title">Log in to your account</h2>
+            <form class="modal__form">
+              <label for="email"></label>
+              <input type="email" id="email" name="email" placeholder="Email" required>
+              <label for="password"></label>
+              <input type="password" id="pass" name="password" placeholder="Password" required>
+              <div class="modal__checkbox-wrap">
+                <label class="modal__checkbox" for="remember-me">Remember me</label>
+                <input type="checkbox" id="remember-me" name="remember-me">
+              </div>
+              
+              <button type="submit" class="modal__submit">Sign In</button>
+              <h3 class="modal__text">Don't have an account?</h3>
+              <a href="index.html#home" class="modal__link">Sign up now</a>
+            </form>
+          </div>
+        </div>
+        
+      </div>
+
       <!-- burger menu -->
       <div class="burger__wrap">
           <input id="burger-menu" type="checkbox"></input>
@@ -78,55 +104,60 @@
               <div class="burger__account-wrapper">
                 <p class="burger__text">Sign in</p>
                 <svg class="burger__account-icon">
-                  <use xlink:href="./src/assets/icons/sprite.svg#user"></use>
+                  <use xlink:href="/src/assets/icons/sprite.svg#user"></use>
                 </svg>
               </div>
               <div class="burger__form-wrapper">
                 <p class="burger__text">Don't have an account?<br/><a href="#" class="burger__item-link">Sign up</a> here.</p>
               </div>
             </div>
+           
           </div>
         </div>
     
     </header>
+    <main class="main">
     
     <section class="toDoList">
       
     </section>
 
-    <footer class="footer">
-      <div class="footer__wrap">
-        <div class="footer__logo">
-          <a class="footer__logo-link" href="index.html#home">
-            <svg class="footer__logo-icon">
-              <use xlink:href="./src/assets/icons/sprite.svg#logo_icon"></use>
-            </svg>
-            <p class="footer__logo-text">LFPlanner</p>
-          </a>
-        </div>
+  </main>
+    
 
-        <p class="footer__text">
-          Having trouble? Contact us<br/>
-          <a href="mailto:email@lfplanner.com" class="footer__contact-link"
-            >email@lfplanner.com</a
-          >
-        </p>
-
-        <div class="footer__wrap-socials">
-          <p class="footer__text">Follow us</p>
-          <a class="footer__socials-link" href="https://vk.com/feed"
-            ><svg class="footer__socials-icon">
-              <use xlink:href="./src/assets/icons/sprite.svg#vk"></use></svg
-          ></a>
-          <a
-            class="footer__socials-link"
-            href="https://t.me/+ghzMd3l67DpkMjBi"
-            ><svg class="footer__socials-icon">
-              <use xlink:href="./src/assets/icons/sprite.svg#tg"></use></svg
-          ></a>
-        </div>
+  <footer class="footer">
+    <div class="footer__wrap">
+      <div class="footer__logo">
+        <a class="footer__logo-link" href="index.html#home">
+          <svg class="footer__logo-icon">
+            <use xlink:href="/src/assets/icons/sprite.svg#logo_icon"></use>
+          </svg>
+          <p class="footer__logo-text">LFPlanner</p>
+        </a>
       </div>
-    </footer>
+
+      <p class="footer__text">
+        Having trouble? Contact us<br/>
+        <a href="mailto:email@lfplanner.com" class="footer__contact-link"
+          >email@lfplanner.com</a
+        >
+      </p>
+
+      <div class="footer__wrap-socials">
+        <p class="footer__text">Follow us</p>
+        <a class="footer__socials-link" href="https://vk.com/feed"
+          ><svg class="footer__socials-icon">
+            <use xlink:href="/src/assets/icons/sprite.svg#vk"></use></svg
+        ></a>
+        <a
+          class="footer__socials-link"
+          href="https://t.me/+ghzMd3l67DpkMjBi"
+          ><svg class="footer__socials-icon">
+            <use xlink:href="/src/assets/icons/sprite.svg#tg"></use></svg
+        ></a>
+      </div>
+    </div>
+  </footer>
 
     <script src="/src/assets/scripts/toDoList.js" type="module"></script>
   </body>

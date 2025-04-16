@@ -4,42 +4,66 @@
 .modal {
   display: none;
   position: fixed;
-  top: 65px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-
+  background-color: rgba(100, 100, 100, 0.403);
   justify-content: center;
   align-items: flex-start;
-  z-index: 999;
-  padding-top: 40px;
+  z-index: 1000;
+  padding-top: 7vh;
+}
+.modal__wrap {
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: white;
+  padding: 3vh 0 9vh 0;
+}
+.modal__close-btn {
+  align-self: flex-end;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  cursor: pointer;
+  margin-right: 40px;
 }
 .modal__content {
-  background-color: #e4ecc9;
+  width: 60%;
+  align-self: center;
+  background-color: variables.$lightgreen-opacity;
   padding: 20px;
-  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 90%;
-  max-width: 350px;
-  font-family: Arial, sans-serif;
+  font-family: variables.$Jost;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .modal__title {
+  margin-top: 1.5rem;
+  font-family: variables.$DMSerif;
   text-align: center;
   font-size: 1.3rem;
-  margin-bottom: 15px;
   font-weight: 600;
   color: #333;
 }
+.modal__form {
+  margin-top: 2rem;
 
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
 .modal__form input[type="email"],
 .modal__form input[type="password"] {
-  width: 90%;
-  margin-bottom: 15px;
   padding: 10px;
-  border: 2px solid #6a8a68;
-  border-radius: 3px;
+  border: none;
   font-size: 1rem;
+  font-family: variables.$JosefinSans;
+  font-weight: 200;
 }
 .modal__form input[type="checkbox"] {
   margin-right: 5px;
@@ -49,10 +73,20 @@
   font-size: 0.95rem;
   color: #333;
 }
-
+.modal__checkbox-wrap {
+  margin: 0.75rem 0 0.5rem 0;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: start;
+}
+.modal__checkbox {
+font-family: variables.$Jost;
+font-weight: 350;
+}
 .modal__submit {
   width: 100%;
-  background-color: #6a8a68;
+  background-color: variables.$darkgreen;
   color: white;
   padding: 10px;
   border: none;
@@ -65,7 +99,8 @@
 }
 .modal__text {
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: variables.$Jost;
+  font-weight: 350;
   font-size: 0.9rem;
   color: #333;
   margin-top: 15px;
@@ -76,18 +111,10 @@
   text-align: center;
   margin-top: 5px;
   color: #5d8a44;
-  font-weight: bold;
+  font-weight: 500;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
   }
 }
-.modal__close {
-  position: absolute;
-  top: 1px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
+

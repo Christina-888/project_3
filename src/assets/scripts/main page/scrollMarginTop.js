@@ -1,4 +1,4 @@
-export function setOffsetHeight() { 
+export function scrollMarginTop() { 
 
   document.querySelector(".container").addEventListener('click', (evt) => {
     const href = evt.target.href;
@@ -11,17 +11,21 @@ export function setOffsetHeight() {
       for (let i=firstLetterIndex; i<href.length; i++) {
         idSection += href[i];
       }
-      console.log(idSection);
-      
+
       const section = document.getElementById(idSection);
 
-      section.style.scrollMarginTop = `${document.querySelector('.header').offsetHeight / 16}rem`;
+      if (idSection == "project") {
+        section.style.scrollMarginTop = `${+(document.querySelector('.header').offsetHeight) + 80}px`;
+      } else {
+        section.style.scrollMarginTop = `${document.querySelector('.header').offsetHeight / 16}rem`;
+      }
+      
     
     }
   });
 
 }
-setOffsetHeight();
+scrollMarginTop();
 
   
   

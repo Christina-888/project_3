@@ -1,9 +1,18 @@
 export function hideNav () {
 
+  const checkbox = document.querySelector(".burger__label"); 
+
   document.querySelector(".burger__nav-list").addEventListener("click", (evt) => {
     if (evt.target.tagName === "A") {
-      document.querySelector(".burger__label").click();
+      checkbox.click();
     }
+  });
+  const accountIcon = document.querySelector(".burger__account-icon");
+  accountIcon.addEventListener("click", () => {
+    checkbox.click();
+    const modal = document.getElementById("logIn-modal");
+    modal.style.display = "flex";
+    
   });
 }
 hideNav();
