@@ -1,0 +1,30 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+
+.action-bar {
+  height: 124px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: variables.$darkgreen;
+  padding: 0 5.4375rem 0 5.4375rem;
+}
+.action-bar__icon {
+  width: 54px;
+  height: 54px;
+  fill: white;
+}
+.action-bar__icon-wrap {
+  display: flex;
+  gap: 20px;
+}
+.action-bar__icon:hover {
+  @include mixin.hover-white-icon;
+}
+
+//AWD
+@media screen and (max-width: 600px){
+  .action-bar {
+    padding: 0 1.5rem 0 1.5rem;
+  }
+}
