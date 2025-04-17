@@ -1,2 +1,109 @@
 @use "../abstracts/mixin";
 @use "../abstracts/variables";
+
+
+.budget__container {
+  @include mixin.grid;
+
+  margin-top: 4vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  justify-content: space-evenly;
+}
+.budget__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.budget__balance {
+  @include mixin.budget-blocks;
+}
+.budget__title {
+  margin: 1rem 0 2rem 0;
+  font-family: variables.$DMSerif;
+  font-size: 2.5rem;
+}
+.budget__balance-wrap {
+  @include mixin.budget-blocks-content;
+}
+.budget__balance-item-wrap {
+  display: flex;
+  gap: 2rem;
+}
+.budget__subtitle {
+  @include mixin.budget-subtitle;
+}
+.budget__transactions {
+  @include mixin.budget-blocks;
+}
+.budget__month-transaction-wrap {
+  @include mixin.budget-blocks-content;
+}
+.budget__transactions-date {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.budget__transactions-wrap {
+  display: flex;
+  gap: 1rem;
+}
+.budget__text {
+  font-family: variables.$Jost;
+  font-weight: 300;
+  font-size: 2rem;
+
+}
+.budget__text_green {
+  color: variables.$income-clr;
+}
+.budget__transactions-expense-wrap {
+}
+.budget__text_red {
+  color: variables.$expence-clr;
+}
+.budget__transaction-comment {
+  font-family: variables.$JosefinSans;
+  font-weight: 200;
+  font-style: italic;
+  font-size: 1.8rem;
+}
+.budget__transactions-wrap_comment {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.budget__wrap_grey {
+  height:fit-content;
+  background-color: variables.$form-bg;
+
+}
+.budget__switch {
+  padding: 2rem 2rem 5rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+.switch__label {
+  margin-top: 1rem;
+  @include mixin.budget-subtitle;
+
+}
+.budget__switch-indicator {
+}
+.budget__form-incomes {
+}
+.budget__form-item-wrap {
+}
+.budget__form-item-text {
+}
+.budget__form-value {
+}
+.budget__form-date {
+}
+.budget__btn {
+}
+.budget__form-expenses {
+  display: none;
+}
+.budget__checkbox {
+}

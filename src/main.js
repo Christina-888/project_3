@@ -7,12 +7,13 @@ import { scrollMarginTop } from '/src/assets/scripts/main page/scrollMarginTop'
 import { clickForward } from '/src/assets/scripts/main page/chartsCarousel'
 import { initializeModal } from "./assets/scripts/modal.js";
 
-
-import { hideNav } from '/src/assets/scripts/main page/burger'
-
 document.addEventListener("DOMContentLoaded", () => {
   initializeModal();
 });
+
+import { hideNav } from '/src/assets/scripts/main page/burger'
+
+
 
 // import { resolve } from 'path'
 // import { defineConfig } from "vite"
