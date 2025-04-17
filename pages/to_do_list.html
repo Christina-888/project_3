@@ -110,8 +110,7 @@
               <div class="burger__form-wrapper">
                 <p class="burger__text">Don't have an account?<br/><a href="#" class="burger__item-link">Sign up</a> here.</p>
               </div>
-            </div>
-           
+            </div>         
           </div>
         </div>
     
@@ -131,8 +130,36 @@
           </svg>
         </div>
       </aside>
-      <section class="toDoList">
-        
+      <section class="main-container">
+        <div class="task-container">
+          <h1 class="task-container__title">TO DO LIST</h1>
+          <div class="task-container__list" id="task-list"></div>
+          <button id="clear-btn" class="task-container__btn">Clear all tasks</button>
+        </div>
+        <form class="inputs-container">
+          <div class="inputs-container__field">
+            <input type="text" id="tasks" placeholder="Put your task">
+          </div>
+          <div class="inputs-container__date">
+            <label class="inputs-container__title">Set date</label> <br />
+            <input type="date" id="date">
+          </div>
+          <div class="inputs-container__time">
+            <label class="inputs-container__title">Set time</label> <br />
+            <input type="time" id="time">
+          </div>
+          <div class="inputs-container__reminder">
+            <label class="inputs-container__title">Repeat reminder</label> <br />
+            <select id="reminder">
+              <option value="no-repeat">No repeat</option>
+              <option value="repeat">Еvery day</option>
+              <option value="repeat">Еvery week</option>
+              <option value="repeat">Еvery month</option>
+              <option value="repeat">Еvery year</option>
+            </select>
+          </div>
+          <button id="add-btn" class="inputs-container__btn">Add task</button>
+        </form>
       </section>
 
     </main>
