@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="root">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/assets/style/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./src/assets/icons/logo.svg"
+      type="image/svg"
+    />
+    <title>LFPlanner ToDoList</title>
+  </head>
+
+  <body class="container">
+    <div class="container__preloader">
+      <div class="container__circle">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </div>
+    <div class="container__wrap">
+      <header class="header">
+        <div class="header__wrap">
+          <div class="header__logo">
+            <a class="header__logo-link" href="index.html">
+              <svg class="header__logo-icon">
+                <use xlink:href="./src/assets/icons/sprite.svg#logo_icon"></use>
+              </svg>
+              <p class="header__logo-text">LFPlanner</p>
+            </a>
+          </div>
+          <div class="header__wrap-nav">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__list-item">
+                  <a href="index.html#home" class="header__item-link">Home</a>
+                </li>
+                <li class="header__list-item">
+                  <a href="index.html#project" class="header__item-link"
+                    >About project</a
+                  >
+                </li>
+                <li class="header__list-item">
+                  <a href="index.html#planner" class="header__item-link"
+                    >Planner</a
+                  >
+                </li>
+                <li class="header__list-item">
+                  <a href="index.html#charts" class="header__item-link"
+                    >Charts</a
+                  >
+                </li>
+                <li class="header__list-item">
+                  <a href="mailto:email@lfplanner.com" class="header__item-link"
+                    >Support</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <svg class="header__account-icon">
+              <use xlink:href="./src/assets/icons/sprite.svg#user"></use>
+            </svg>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logo">
+        <a href="index.html#home">
+          <svg class="footer__logo-icon">
+            <use xlink:href="./src/assets/icons/sprite.svg#logo_icon"></use>
+          </svg>
+          <p class="footer__logo-text">LFPlanner</p>
+        </a>
+      </div>
+      <p class="footer__text footer__text-cont">
+        Having trouble?
+        <br />
+        Contact us
+        <a href="mailto:email@lfplanner.com" class="footer__contact-link"
+          >email@lfplanner.com</a
+        >
+      </p>
+      <div class="footer__wrap-socials">
+        <p class="footer__text">Follow us</p>
+        <a href="https://vk.com/feed"><svg class="footer__socials-icon">
+          <use xlink:href="./src/assets/icons/sprite.svg#vk"></use>
+        </svg></a>
+        <a href="https://t.me/+ghzMd3l67DpkMjBi"><svg class="footer__socials-icon">
+          <use xlink:href="./src/assets/icons/sprite.svg#tg"></use>
+        </svg></a>        
+      </div>
+    </footer>
+
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
