@@ -15,6 +15,12 @@ console.log("todo list");
 const taskList = document.getElementById('task-list');
 const addBtn = document.getElementById('add-btn');
 const clearBtn = document.getElementById('clear-btn');
+const updateBtn = document.getElementById('update-btn');
+
+//Обновление страницы при клике на значок:
+updateBtn.addEventListener('click', () => {
+    location.reload(); 
+});
 
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
@@ -94,16 +100,17 @@ function renderTasks() {
   
 taskList.appendChild(monthContainer); 
   });
-
-//Убираем кнопку с очисткой задач, когда задач нет:
-  const clearBtn = document.getElementById('clear-btn');
+}
+/*  
+//Убираем корзину с очисткой задач, когда задач нет:
   if (activeTasks.length > 0) {
       clearBtn.style.display = 'block';
   } else {
       clearBtn.style.display = 'none';
   }
 } 
-  
+*/
+
 //Вешаем на кнопку:
 addBtn.addEventListener('click', (e) => {
   e.preventDefault(); 

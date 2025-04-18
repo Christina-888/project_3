@@ -119,13 +119,13 @@
       <aside class="action-bar">
         <a href="index.html" class="href"> <img src="/src/assets/icons/btn_back.svg" alt="button back" class="action-bar__icon"></a>
         <div class="action-bar__icon-wrap">
-          <svg class="action-bar__icon">
+          <svg class="action-bar__icon" id="update-btn">
             <use xlink:href="/src/assets/icons/sprite.svg#btn_update"></use>
           </svg>
           <svg class="action-bar__icon">
             <use xlink:href="/src/assets/icons/sprite.svg#btn_save"></use>
           </svg>
-          <svg class="action-bar__icon">
+          <svg class="action-bar__icon" id="clear-btn">
             <use xlink:href="/src/assets/icons/sprite.svg#btn_clear"></use>
           </svg>
         </div>
@@ -134,7 +134,6 @@
         <div class="task-container">
           <h1 class="task-container__title">TO DO LIST</h1>
           <div class="task-container__list" id="task-list"></div>
-          <button id="clear-btn" class="task-container__btn">Clear all tasks</button>
         </div>
         <form class="inputs-container">
           <div class="inputs-container__field">
