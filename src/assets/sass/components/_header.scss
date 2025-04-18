@@ -55,7 +55,6 @@
 //style and fonts
 .header {
   background-color: white;
-  border-bottom: 2px dotted rgba(0, 0, 0, 0.151);
 }
 .header__logo-icon {
   fill: rgba(0, 0, 0, 0.8);
@@ -85,15 +84,17 @@
 
 
 //effects
-.header__wrap {
+.header {
   transform: translateY(-100%);
   animation: ani 1.5s forwards;
   @keyframes ani {
     0% {
       transform: translateY(-100%);
+      border-bottom:none;
     }
     100% {
       transform: translateY(0);
+      border-bottom: 2px dotted rgba(0, 0, 0, 0.151);
     }
   }
 }

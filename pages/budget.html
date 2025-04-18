@@ -116,7 +116,7 @@
     
     </header>
     <main class="main">
-      <aside class="action-bar">
+      <aside class="action-bar action-bar_budget-page">
         <a href="index.html" class="href"> <img src="/src/assets/icons/btn_back.svg" alt="button back" class="action-bar__icon"></a>
         <div class="action-bar__icon-wrap">
           <svg class="action-bar__icon">
@@ -143,19 +143,19 @@
             <div class="budget__balance-wrap">
               <div class="budget__balance-item-wrap">
                 <h2 class="budget__subtitle">Incomes:</h2>
-                <h2 class="budget__subtitle budget__text_green" id="balance_incomes">25000</h2>
+                <h2 class="budget__subtitle budget__text_green" id="balance_incomes">0</h2>
               </div>
 
               <div class="budget__balance-item-wrap">
 
               <h2 class="budget__subtitle">Expenses:</h2>
-              <h2 class="budget__subtitle budget__text_red" id="balance_expenses">22000</h2>
+              <h2 class="budget__subtitle budget__text_red" id="balance_expenses">0</h2>
               </div>
 
               <div class="budget__balance-item-wrap">
 
                 <h2 class="budget__subtitle">Difference:</h2>
-                <h2 class="budget__subtitle" id="balance_diff">3000</h2>
+                <h2 class="budget__subtitle" id="balance_diff">0</h2>
               </div>
 
             </div>
@@ -198,14 +198,16 @@
 
         <div class="budget__wrap budget__wrap_grey">
           <div class="budget__switch">
-            <input name="switch" id="incomes-switch" type="radio" checked/>
-            <label for="incomes-switch" class="switch__label">Incomes</label>
-            <input name="switch" id="expences-switch" type="radio" />
-            <label for="expenses-switch" class="switch__label">Expenses</label>
-            <div class="budget__switch-indicator"></div>
+            <label class="switch__label" id="incomes-switch"><input name="switch" type="radio" checked/>Incomes</label>
+            <div class="budget__switch-indicator-wrap">
+              <div class="budget__switch-indicator">
+              </div>
+            </div>
+            <label  class="switch__label" id="expenses-switch"><input name="switch" type="radio" />Expenses</label>
+            
           </div>
 
-          <form class="budget__form-incomes">
+          <form class="budget__form" id="form-incomes" >
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Select a type</p>
               <select name="income-types" id="income-types" >
@@ -224,7 +226,7 @@
             </div>
             
             <div class="budget__form-item-wrap">
-            <label for="income-value" class="budget__form-value"><input name="income-value" id="income-value" type="number" placeholder="Put income value" required/></label>
+            <label for="income-value" ><input class="budget__form-value" name="income-value" id="income-value" type="number" placeholder="Put income value" required/></label>
             </div>
 
             <div class="budget__form-item-wrap">
@@ -258,18 +260,20 @@
               <select name="income-repeat-reminder" id="income-repeat-reminder">
                 <option value="no repeat" selected="selected">no repeat</option>
                 <option value="every day">every day
-              </option>
+                </option>
                 <option value="every week">every week
-              </option>
-                <option value="every month">Russian Ruble (RUB)</option>
-                <option value="every year">Japanese Yen (JPY)</option>
+                </option>
+                <option value="every week">every month
+                </option>
+                <option value="every week">every year
+                </option>
               </select>
             </div>
 
             <button class="budget__btn" type="submit">Add</button>
           </form>
 
-          <form class="budget__form-expenses">
+          <form class="budget__form" id="form-expenses">
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Select a type</p>
               <select name="expense-types" id="expense-types" >
@@ -289,11 +293,11 @@
             </div>
             
             <div class="budget__form-item-wrap">
-              <label for="expense-value" class="budget__form-value"><input name="comment-field" id="comment-field" type="text" placeholder="Comment field"/></label>
+              <label for="expense-value" ><input class="budget__form-value" name="comment-field" id="comment-field" type="text" placeholder="Comment field"/></label>
             </div>
 
             <div class="budget__form-item-wrap">
-            <label for="expense-value" class="budget__form-value"><input name="expense-value" id="expense-value" type="number" placeholder="Put expense-value" required/></label>
+            <label for="expense-value" ><input class="budget__form-value" name="expense-value" id="expense-value" type="number" placeholder="Put expense value" required/></label>
             </div>
 
             <div class="budget__form-item-wrap">
@@ -316,7 +320,7 @@
 
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Set date</p>
-              <label for="income-date" class="budget__form-date"><input name="income-date" id="income-date" type="text" placeholder="__.__.____"
+              <label for="expense-date" class="budget__form-date"><input name="expense-date" id="expense-date" type="text" placeholder="__.__.____"
                 onblur="this.placeholder='__.__.___'"
                 onfocus="this.placeholder='DD.MM.YYYY'" required/></label>
             </div>
@@ -324,24 +328,26 @@
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Repeat reminder</p>
   
-              <select name="income-repeat-reminder" id="income-repeat-reminder">
+              <select name="expense-repeat-reminder" id="expense-repeat-reminder">
                 <option value="no repeat" selected="selected">no repeat</option>
                 <option value="every day">every day
-              </option>
+                </option>
                 <option value="every week">every week
-              </option>
-                <option value="every month">Russian Ruble (RUB)</option>
-                <option value="every year">Japanese Yen (JPY)</option>
+                </option>
+                <option value="every week">every month
+                </option>
+                <option value="every week">every year
+                </option>
               </select>
             </div>
 
             <div class="budget__form-item-wrap">
-              <p class="budget__form-item-text">Add to the to do list</p>
-              <label for="expence-list" class="budget__checkbox"><input name="expence-list" id="expence-list" type="checkbox"/></label>
+              <p class="budget__form-item-text budget__form-item-text_large">Add to the to do list</p>
+              <label for="expense-list" ><input name="expense-list" id="expense-list" type="checkbox" class="budget__checkbox" /></label>
             </div>
-
-            <button class="budget__btn" type="submit">Add</button>
+            <button class="budget__btn" type="button">Add</button>
           </form>
+          
         </div>
 
         <!-- INFOGRAPHICS -->
