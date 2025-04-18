@@ -116,7 +116,7 @@
     
     </header>
     <main class="main">
-      <aside class="action-bar">
+      <aside class="action-bar action-bar_budget-page">
         <a href="index.html" class="href"> <img src="/src/assets/icons/btn_back.svg" alt="button back" class="action-bar__icon"></a>
         <div class="action-bar__icon-wrap">
           <svg class="action-bar__icon">
@@ -131,7 +131,227 @@
         </div>
       </aside>
       <section class="budget">
-      <div class="h"></div>
+        
+        <!-- BUDGET -->
+        <div class="budget__container">
+        
+          <div class="budget__wrap">
+
+          <!-- block BALANCE -->
+          <div class="budget__balance">
+            <h1 class="budget__title">YOUR CURRENT BALANCE</h1>
+            <div class="budget__balance-wrap">
+              <div class="budget__balance-item-wrap">
+                <h2 class="budget__subtitle">Incomes:</h2>
+                <h2 class="budget__subtitle budget__text_green" id="balance_incomes">0</h2>
+              </div>
+
+              <div class="budget__balance-item-wrap">
+
+              <h2 class="budget__subtitle">Expenses:</h2>
+              <h2 class="budget__subtitle budget__text_red" id="balance_expenses">0</h2>
+              </div>
+
+              <div class="budget__balance-item-wrap">
+
+                <h2 class="budget__subtitle">Difference:</h2>
+                <h2 class="budget__subtitle" id="balance_diff">0</h2>
+              </div>
+
+            </div>
+          </div>
+        
+          <!-- block TRANSACTIONS -->
+          <div class="budget__transactions">
+            <h2 class="budget__title">UPCOMING TRANSACTIONS</h2>
+            <div class="budget__month-transaction-wrap">
+
+              <div class="budget__transactions-date">
+                <h3 class="budget__subtitle">April, 6</h3>
+                <div class="budget__transactions-wrap">
+                  <p class="budget__text budget__text_green">+50000</p>
+                  <p class="budget__text">Salary</p>
+                </div>
+                <div class="budget__transactions-wrap">
+                <p class="budget__text budget__text_red">-30000</p>
+                <p class="budget__text">Education</p>
+                </div>
+
+              </div>
+              
+              <div class="budget__transactions-date">
+                <h3 class="budget__subtitle">April, 7</h3>
+                <div class="budget__transactions-wrap budget__transactions-wrap_comment">
+                  <p class="budget__text budget__text_red">-10000</p>
+                  <p class="budget__text">Utility payments</p>
+                  <p class="budget__transaction-comment">Appartments in Moscow</p>
+                </div>
+              </div>                
+              
+            </div>
+            
+          </div>
+
+        </div>
+
+        <!-- block NEW TRANSACTION FORM-->
+
+        <div class="budget__wrap budget__wrap_grey">
+          <div class="budget__switch">
+            <label class="switch__label" id="incomes-switch"><input name="switch" type="radio" checked/>Incomes</label>
+            <div class="budget__switch-indicator-wrap">
+              <div class="budget__switch-indicator">
+              </div>
+            </div>
+            <label  class="switch__label" id="expenses-switch"><input name="switch" type="radio" />Expenses</label>
+            
+          </div>
+
+          <form class="budget__form" id="form-incomes" >
+            <div class="budget__form-item-wrap">
+              <p class="budget__form-item-text">Select a type</p>
+              <select name="income-types" id="income-types" >
+                <option value="" selected="selected"></option>
+                <option value="Salary">Salary</option>
+                <option value="Interest on the deposit">Interest on the deposit</option>
+                <option value="Dividends">Dividends</option>
+                <option value="Property sale income">Property sale income</option>
+                <option value="Rental income">Rental income</option>
+                <option value="Business income">Business income</option>
+                <option value="Government benefits">Government benefits</option>
+                <option value="Gifts and inheritance">Gifts and inheritance</option>
+                <option value="Passive income">Passive income</option>
+                <option value="Other income">Other income and inheritance</option>
+              </select>
+            </div>
+            
+            <div class="budget__form-item-wrap">
+            <label for="income-value" ><input class="budget__form-value" name="income-value" id="income-value" type="number" placeholder="Put income value" required/></label>
+            </div>
+
+            <div class="budget__form-item-wrap">
+              <p class="budget__form-item-text">Select currency</p>
+              <select name="currency" id="income-currency">
+                <option value="" selected="selected"></option>
+                <option value="US Dollar (USD)">US Dollar (USD)
+              </option>
+                <option value="Euro (EUR)">Euro (EUR)
+              </option>
+                <option value="Russian Ruble (RUB)">Russian Ruble (RUB)</option>
+                <option value="Japanese Yen (JPY)">Japanese Yen (JPY)</option>
+                <option value="British Pound (GBP)">British Pound (GBP)</option>
+                <option value="Swiss Franc (CHF)">Swiss Franc (CHF)</option>
+                <option value="Australian Dollar (AUD)">Australian Dollar (AUD)s</option>
+                <option value="Chinese Yuan (CNY)">Chinese Yuan (CNY)</option>
+                <option value="Kazakhstani Tenge (KZT)">Kazakhstani Tenge (KZT)</option>
+              </select>
+            </div>
+
+            <div class="budget__form-item-wrap">
+              <p class="budget__form-item-text">Set date</p>
+              <label for="income-date" class="budget__form-date"><input name="income-date" id="income-date" type="text" placeholder="__.__.____"
+                onblur="this.placeholder='__.__.___'"
+                onfocus="this.placeholder='DD.MM.YYYY'" required/></label>
+            </div>
+
+            <div class="budget__form-item-wrap">
+              <p class="budget__form-item-text">Repeat reminder</p>
+  
+              <select name="income-repeat-reminder" id="income-repeat-reminder">
+                <option value="no repeat" selected="selected">no repeat</option>
+                <option value="every day">every day
+                </option>
+                <option value="every week">every week
+                </option>
+                <option value="every week">every month
+                </option>
+                <option value="every week">every year
+                </option>
+              </select>
+            </div>
+
+            <button class="budget__btn" type="submit">Add</button>
+          </form>
+
+          <form class="budget__form" id="form-expenses">
+            <div class="budget__form-item-wrap">
+              <p class="budget__form-item-text">Select a type</p>
+              <select name="expense-types" id="expense-types" >
+                <option value="" selected="selected"></option>
+                <option value="Housing">Housing</option>
+                <option value="Food">Food</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Communication">Communication</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Clothing and footwear">Clothing and footwear</option>
+                <option value="Education">Education</option>
+                <option value="Entertaiment">Entertaiment</option>
+                <option value="Savings and Investment">Savings and Investment</option>
+                <option value="Taxes">Taxes</option>
+                <option value="Other expense">Other income and inheritance</option>
+              </select>
+            </div>
+            
+            <div class="budget__form-item-wrap">
+              <label for="expense-value" ><input class="budget__form-value" name="comment-field" id="comment-field" type="text" placeholder="Comment field"/></label>
+            </div>
+
+            <div class="budget__form-item-wrap">
+            <label for="expense-value" ><input class="budget__form-value" name="expense-value" id="expense-value" type="number" placeholder="Put expense value" required/></label>
+            </div>
+
+            <div class="budget__form-item-wrap">
+              <p class="budget__form-item-text">Select currency</p>
+              <select name="currency" id="expense-currency">
+                <option value="" selected="selected"></option>
+                <option value="US Dollar (USD)">US Dollar (USD)
+              </option>
+                <option value="Euro (EUR)">Euro (EUR)
+              </option>
+                <option value="Russian Ruble (RUB)">Russian Ruble (RUB)</option>
+                <option value="Japanese Yen (JPY)">Japanese Yen (JPY)</option>
+                <option value="British Pound (GBP)">British Pound (GBP)</option>
+                <option value="Swiss Franc (CHF)">Swiss Franc (CHF)</option>
+                <option value="Australian Dollar (AUD)">Australian Dollar (AUD)s</option>
+                <option value="Chinese Yuan (CNY)">Chinese Yuan (CNY)</option>
+                <option value="Kazakhstani Tenge (KZT)">Kazakhstani Tenge (KZT)</option>
+              </select>
+            </div>
+
+            <div class="budget__form-item-wrap">
+              <p class="budget__form-item-text">Set date</p>
+              <label for="expense-date" class="budget__form-date"><input name="expense-date" id="expense-date" type="text" placeholder="__.__.____"
+                onblur="this.placeholder='__.__.___'"
+                onfocus="this.placeholder='DD.MM.YYYY'" required/></label>
+            </div>
+
+            <div class="budget__form-item-wrap">
+              <p class="budget__form-item-text">Repeat reminder</p>
+  
+              <select name="expense-repeat-reminder" id="expense-repeat-reminder">
+                <option value="no repeat" selected="selected">no repeat</option>
+                <option value="every day">every day
+                </option>
+                <option value="every week">every week
+                </option>
+                <option value="every week">every month
+                </option>
+                <option value="every week">every year
+                </option>
+              </select>
+            </div>
+
+            <div class="budget__form-item-wrap">
+              <p class="budget__form-item-text budget__form-item-text_large">Add to the to do list</p>
+              <label for="expense-list" ><input name="expense-list" id="expense-list" type="checkbox" class="budget__checkbox" /></label>
+            </div>
+            <button class="budget__btn" type="button">Add</button>
+          </form>
+          
+        </div>
+
+        <!-- INFOGRAPHICS -->
+        
       </section>
     </main>
     

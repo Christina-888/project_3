@@ -11,3 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
 import { hideNav } from '/src/assets/scripts/main page/burger'
 
 console.log("budget");
+
+import { selectTypeOfTransactions } from "/src/assets/scripts/budget/selectTypeOfTransactions";
+
+
+import { addTransactions} from "/src/assets/scripts/budget/addTransaction";

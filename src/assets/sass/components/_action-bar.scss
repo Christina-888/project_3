@@ -6,8 +6,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: variables.$darkgreen;
   padding: 0 5.4375rem 0 5.4375rem;
+  @include mixin.colorTransition;
+}
+.action-bar_budget-page {
+  padding: 0 2.65rem 0 2.65rem; 
 }
 .action-bar__icon {
   width: 54px;

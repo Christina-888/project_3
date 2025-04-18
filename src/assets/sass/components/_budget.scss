@@ -1,2 +1,208 @@
 @use "../abstracts/mixin";
 @use "../abstracts/variables";
+
+
+.budget__container {
+  @include mixin.grid-budget;
+
+  margin-top: 4vh;
+  display: flex;
+  gap: 2.5rem;
+  justify-content: space-evenly;
+}
+.budget__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 690px;
+}
+.budget__balance {
+  @include mixin.budget-blocks;
+}
+.budget__title {
+  margin: 1rem 0 2rem 0;
+  font-family: variables.$DMSerif;
+  font-size: 2.5rem;
+  text-align: center
+}
+.budget__balance-wrap {
+  @include mixin.budget-blocks-content;
+}
+.budget__balance-item-wrap > h2:first-of-type{
+  width: 50%;
+  text-align: end;
+
+}
+.budget__balance-item-wrap {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  // justify-content: center;
+
+}
+.budget__subtitle {
+  @include mixin.budget-subtitle;
+}
+.budget__transactions {
+  @include mixin.budget-blocks;
+}
+.budget__month-transaction-wrap {
+  @include mixin.budget-blocks-content;
+}
+.budget__transactions-date {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.budget__transactions-wrap {
+  display: flex;
+  gap: 1rem;
+}
+.budget__text {
+  font-family: variables.$Jost;
+  font-weight: 300;
+  font-size: 2rem;
+
+}
+.budget__text_green {
+  color: variables.$darkgreen;
+}
+.budget__transactions-expense-wrap {
+}
+.budget__text_red {
+  color: variables.$red;
+}
+.budget__transaction-comment {
+  font-family: variables.$JosefinSans;
+  font-weight: 200;
+  font-style: italic;
+  font-size: 1.8rem;
+}
+.budget__transactions-wrap_comment {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.budget__wrap_grey {
+  padding: 2rem 2rem 5rem 2rem;
+  gap: 2rem;
+  height:fit-content;
+  background-color: variables.$form-bg;
+
+}
+
+//switch
+.budget__switch {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 1rem;
+}
+
+.switch__label {
+  margin-top: 1rem;
+  @include mixin.budget-subtitle;
+
+}
+.budget__switch input[type=radio] {
+  display: none;
+}
+
+.budget__switch-indicator-wrap {
+  width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: variables.$darkgreen-opacity;
+  display: flex;
+}
+.budget__switch-indicator {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: variables.$darkgreen;
+}
+
+
+.budget__form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+}
+.budget__form_hidden {
+  display: none;
+}
+.budget__form-item-wrap {
+  display: flex;
+  gap: 1rem;
+}
+.budget__form-item-wrap .budget__form-item-text {
+  width: 50%;
+}
+.budget__form-item-text_large {
+  width: auto;
+}
+.budget__form-item-wrap:last-of-type > label {
+  width: 10%;
+}
+.budget__checkbox {
+  height: 30px;
+}
+.budget__form-item-wrap input, select {
+  font-family: variables.$JosefinSans;
+  font-size: 1.9rem;
+}
+.budget__form-item-wrap select {
+  font-weight: 200;
+}
+.budget__form-item-wrap > select:target {
+  background-color: variables.$lightgreen-opacity;
+}
+.budget__form-item-wrap label, input {
+  width: 100%;
+}
+.budget__form-item-wrap > select {
+  width: 100%;
+}
+.budget__form-item-wrap input::placeholder, select::placeholder {
+  font-weight: 200;
+}
+.budget__form-item-text {
+  color: variables.$deepdarkgrey;
+  font-family: variables.$DMSerif;
+  font-size: 2rem;
+}
+.budget__form-value {
+  border-radius: 30px;
+  height: 50px;
+  text-align: center;
+  background-color: variables.$lightgreen-opacity;
+  border: none;
+  font-size: 1.9rem;
+  font-weight: 400;
+  font-style: italic;
+  color: variables.$darkgreen;
+}
+.budget__form-date {
+}
+.budget__btn {
+  width: 230px;
+  height: 70px;
+  background-color: white;
+  color: variables.$darkgreen;
+  border: variables.$darkgreen 3px solid;
+  border-radius: 40px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: variables.$DMSerif;
+  align-self: center;
+  margin-top: 2rem;
+}
+.budget__btn:hover {
+  @include mixin.planners-btn-hover; 
+}
+.budget__btn:active {
+  @include mixin.planners-btn-active; 
+}
+.budget__btn:disabled {
+  @include mixin.planners-btn-disabled; 
+}
