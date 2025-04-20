@@ -207,10 +207,10 @@
             
           </div>
 
-          <form class="budget__form" id="form-incomes" >
+          <form class="budget__form" id="form-incomes" name="formIncomes" >
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Select a type</p>
-              <select name="income-types" id="income-types" >
+              <select name="type" id="income-types" required>
                 <option value="" selected="selected"></option>
                 <option value="Salary">Salary</option>
                 <option value="Interest on the deposit">Interest on the deposit</option>
@@ -226,12 +226,12 @@
             </div>
             
             <div class="budget__form-item-wrap">
-            <label for="income-value" ><input class="budget__form-value" name="income-value" id="income-value" type="number" placeholder="Put income value" required/></label>
+            <label for="income-value" ><input class="budget__form-value" name="incomeValue" id="income-value" type="number" placeholder="Put income value" required/></label>
             </div>
 
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Select currency</p>
-              <select name="currency" id="income-currency">
+              <select name="currency" id="income-currency" required>
                 <option value="" selected="selected"></option>
                 <option value="US Dollar (USD)">US Dollar (USD)
               </option>
@@ -270,13 +270,13 @@
               </select>
             </div>
 
-            <button class="budget__btn" type="submit">Add</button>
+            <button class="budget__btn" type="button" name="btn">Add</button>
           </form>
 
-          <form class="budget__form" id="form-expenses">
+          <form class="budget__form" id="form-expenses" name="formExpenses">
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Select a type</p>
-              <select name="expense-types" id="expense-types" >
+              <select name="type" id="expense-types" >
                 <option value="" selected="selected"></option>
                 <option value="Housing">Housing</option>
                 <option value="Food">Food</option>
@@ -345,7 +345,7 @@
               <p class="budget__form-item-text budget__form-item-text_large">Add to the to do list</p>
               <label for="expense-list" ><input name="expense-list" id="expense-list" type="checkbox" class="budget__checkbox" /></label>
             </div>
-            <button class="budget__btn" type="button">Add</button>
+            <button class="budget__btn" type="button" name="btn">Add</button>
           </form>
           
         </div>
