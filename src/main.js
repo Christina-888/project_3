@@ -16,12 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
 import { hideNav } from '/src/assets/scripts/main page/burger'
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  initializeModal();
-});
-
-import { hideNav } from '/src/assets/scripts/main page/burger'
-
 
 
 // import { resolve } from 'path'

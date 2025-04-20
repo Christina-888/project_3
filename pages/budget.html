@@ -54,30 +54,56 @@
         </svg>
       </div>
 
-      <!-- modal -->
-      <div class="modal" id="logIn-modal">
+       <!-- Login modal form -->
+       <div class="modal" id="logIn-modal">
         <div class="modal__wrap">
-          <button class="modal__close-btn" id="close-modal"><img class="modal__close-btn" src="/src/assets/icons/btn_close.svg" /></button>
+          <button class="modal__close-btn" id="close-modal">
+            <img class="modal__close-btn" src="/src/assets/icons/btn_close.svg" />
+          </button>
           <div class="modal__content">
-            
-            <h2 class="modal__title">Log in to your account</h2>
-            <form class="modal__form">
-              <label for="email"></label>
-              <input type="email" id="email" name="email" placeholder="Email" required>
-              <label for="password"></label>
-              <input type="password" id="pass" name="password" placeholder="Password" required>
-              <div class="modal__checkbox-wrap">
+            <!-- Заголовок для формы входа -->
+            <h2 class="modal__title modal__title-login">Log in to your account</h2>
+            <form class="modal__form modal__form-login">
+              <div class="modal__input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Email" required />
+              </div>
+              <div class="modal__input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Password" required />
+              </div>
+              <!-- <div class="modal__checkbox-wrap">
                 <label class="modal__checkbox" for="remember-me">Remember me</label>
                 <input type="checkbox" id="remember-me" name="remember-me">
-              </div>
+              </div> -->
               
+
               <button type="submit" class="modal__submit">Sign In</button>
               <h3 class="modal__text">Don't have an account?</h3>
-              <a href="index.html#home" class="modal__link">Sign up now</a>
+              <a href="#" class="modal__link" id="switch-to-signup">Sign up now</a>
+            </form>
+      
+            <!-- Заголовок для формы регистрации -->
+            <h2 class="modal__title modal__title-signup" style="display: none;">Create Account</h2>
+            <form class="modal__form modal__form-signup" style="display: none;">
+              <div class="modal__input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Username" required />
+              </div>
+              <div class="modal__input-group">
+                <label for="email-signup">Email:</label>
+                <input type="email" id="email-signup" name="email" placeholder="Email" required />
+              </div>
+              <div class="modal__input-group">
+                <label for="password-signup">Password:</label>
+                <input type="password" id="password-signup" name="password" placeholder="Password" required />
+              </div>
+              <button type="submit" class="modal__submit">Sign Up</button>
+              <h3 class="modal__text">Already have an account?</h3>
+              <a href="#" class="modal__link" id="switch-to-login">Sign In</a>
             </form>
           </div>
         </div>
-        
       </div>
 
       <!-- burger menu -->

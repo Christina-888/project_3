@@ -11,7 +11,7 @@ export function setBtnDisabled () {
 
   const formExpenses = forms.formExpenses;
 
-  const selectIncomeType = document.querySelectorAll("");
+  const selectIncomeType = document.querySelectorAll("select");
   console.log(selectIncomeType);
 
   const btnAddIncome = formIncomes.elements.btn;

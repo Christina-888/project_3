@@ -173,3 +173,11 @@
   background-color: white;
   color: variables.$lightgreen;
 }
+.modal__checkbox-wrap {
+  display: flex;
+}
+.modal__checkbox-wrap > input {
+  width: 15px;
+  height: 15px;
+}
+
