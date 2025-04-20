@@ -38,6 +38,7 @@
   /*height: 12.7rem; /*203px;*/
   box-shadow: 0px 2px 2px #4d504d;
   text-align: center;
+  font-family: "Jost";
 }
 
 #tasks::placeholder {
@@ -93,6 +94,7 @@
   height: 2rem;
   /*width: 18.0625rem; /*289px;*/
   /*height: 6rem; /*96px;*/
+  font-size: 1.1rem;
 }
 
 #reminder::placeholder {
@@ -104,16 +106,14 @@
 .inputs-container__btn, .task-container__btn {
   margin-top: 7%;
   margin-bottom: 4%;
-  border: 2px solid darkgreen;
+  border: 2px solid variables.$darkgreen;
   border-radius: 20px;
   background-color: white;
-  color: darkgreen;
+  color: variables.$darkgreen;
   font-family: "DM Serif Display";
   font-size: 1.2rem;
   /* font-size: 2.1875rem /*35px; */;
   padding: 1.5% 4%;
-  box-shadow: 0px 2px 2px #4d504d;
-  cursor: pointer;
 }
 
 .task-container__btn {
@@ -128,7 +128,7 @@
   border-radius: 20px;
   padding: 2% 4%;
   width: 80%;
-  margin: 3%;
+  margin: 3% auto;
   font-family: "Jost";
 }
 
@@ -142,6 +142,17 @@
 
 .month-header {
   margin-bottom: 2%;
+}
+
+//effects for btn
+.inputs-container__btn:hover {
+  @include mixin.planners-btn-hover; 
+}
+.inputs-container__btn:active {
+  @include mixin.planners-btn-active; 
+}
+.inputs-container__btn:active {
+  @include mixin.planners-btn-disabled; 
 }
 
 @media screen and (max-width: 1273px) {

@@ -15,6 +15,12 @@ console.log("todo list");
 const taskList = document.getElementById('task-list');
 const addBtn = document.getElementById('add-btn');
 const clearBtn = document.getElementById('clear-btn');
+const updateBtn = document.getElementById('update-btn');
+
+//Обновление страницы при клике на значок:
+updateBtn.addEventListener('click', () => {
+    location.reload(); 
+});
 
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
@@ -73,6 +79,28 @@ function renderTasks() {
   tasksByMonth[month].forEach((task, index) => {
     const taskItem = document.createElement('div');
     taskItem.className = 'task-item'; // в CSS!!
+
+  //Делаем отсчёт в календаре с текущей даты:  
+    const inputDay = document.getElementById("date");
+    
+    function setMinDate() {
+      const now = new Date();
+        
+      let currentMonth = now.getMonth() + 1; //Месяцы начинаются с 0;
+      if (currentMonth < 10) {
+          currentMonth = '0' + currentMonth; 
+      }
+    
+      let currentDate = now.getDate();
+      if (currentDate < 10) {
+          currentDate = '0' + currentDate; 
+      }
+    
+      const fullCurrentDate = now.getFullYear() + "-" + currentMonth + "-" + currentDate;
+      inputDay.setAttribute("min", fullCurrentDate);
+    }
+    
+    window.onload = setMinDate;  
   
   //Если указано/не указано время:
   let displayTime;
@@ -94,16 +122,17 @@ function renderTasks() {
   
 taskList.appendChild(monthContainer); 
   });
-
-//Убираем кнопку с очисткой задач, когда задач нет:
-  const clearBtn = document.getElementById('clear-btn');
+}
+/*  
+//Убираем корзину с очисткой задач, когда задач нет:
   if (activeTasks.length > 0) {
       clearBtn.style.display = 'block';
   } else {
       clearBtn.style.display = 'none';
   }
 } 
-  
+*/
+
 //Вешаем на кнопку:
 addBtn.addEventListener('click', (e) => {
   e.preventDefault(); 
