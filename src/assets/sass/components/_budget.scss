@@ -183,6 +183,29 @@
   color: variables.$darkgreen;
 }
 .budget__form-date {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  padding: 0px 7px 0 1px;
+}
+.budget__form-date > input {
+  border: none;
+  padding: 15px 7px 0 1px;
+
+}
+.budget__calendar-wrap {
+  align-self: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+
+}
+.budget__calendar-icon {
+  position: absolute;
+  // top: 540px;
+  // right: 540px;
 }
 .budget__btn {
   width: 230px;

@@ -54,8 +54,8 @@
         </svg>
       </div>
 
-       <!-- Login modal form -->
-       <div class="modal" id="logIn-modal">
+      <!-- Login modal form -->
+      <div class="modal" id="logIn-modal">
         <div class="modal__wrap">
           <button class="modal__close-btn" id="close-modal">
             <img class="modal__close-btn" src="/src/assets/icons/btn_close.svg" />
@@ -250,9 +250,13 @@
                 <option value="Other income">Other income and inheritance</option>
               </select>
             </div>
+
+            <div class="budget__form-item-wrap">
+              <label for="expense-value" ><input class="budget__form-value" name="comment-field" id="income-comment-field" type="text" placeholder="Comment field"/></label>
+            </div>
             
             <div class="budget__form-item-wrap">
-            <label for="income-value" ><input class="budget__form-value" name="incomeValue" id="income-value" type="number" placeholder="Put income value" required/></label>
+            <label for="income-value" ><input class="budget__form-value" name="sum" id="income-value" type="number" placeholder="Put income value" required/></label>
             </div>
 
             <div class="budget__form-item-wrap">
@@ -275,7 +279,7 @@
 
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Set date</p>
-              <label for="income-date" class="budget__form-date"><input name="income-date" id="income-date" type="text" placeholder="__.__.____"
+              <label for="income-date" class="budget__form-date"><input class="budget__date-input" name="date" id="income-date" type="text" maxlength="10" placeholder="__.__.____"
                 onblur="this.placeholder='__.__.___'"
                 onfocus="this.placeholder='DD.MM.YYYY'" required/></label>
             </div>
@@ -319,11 +323,11 @@
             </div>
             
             <div class="budget__form-item-wrap">
-              <label for="expense-value" ><input class="budget__form-value" name="comment-field" id="comment-field" type="text" placeholder="Comment field"/></label>
+              <label for="expense-value" ><input class="budget__form-value" name="comment-field" id="expense-comment-field" type="text" placeholder="Comment field"/></label>
             </div>
 
             <div class="budget__form-item-wrap">
-            <label for="expense-value" ><input class="budget__form-value" name="expense-value" id="expense-value" type="number" placeholder="Put expense value" required/></label>
+            <label for="expense-value" ><input class="budget__form-value" name="sum" id="expense-value" type="number" placeholder="Put expense value" required/></label>
             </div>
 
             <div class="budget__form-item-wrap">
@@ -346,7 +350,8 @@
 
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Set date</p>
-              <label for="expense-date" class="budget__form-date"><input name="expense-date" id="expense-date" type="text" placeholder="__.__.____"
+              <label for="expense-date" class="budget__form-date">
+                <input class="budget__date-input" name="date" id="date-input" type="text" maxlength="10" placeholder="__.__.____"
                 onblur="this.placeholder='__.__.___'"
                 onfocus="this.placeholder='DD.MM.YYYY'" required/></label>
             </div>

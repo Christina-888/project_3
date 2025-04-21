@@ -20,8 +20,15 @@ import { setBtnDisabled } from "/src/assets/scripts/budget/btnDisabled";
 
 import { addTransactions} from "/src/assets/scripts/budget/addTransaction";
 
-import { validateForm } from "/src/assets/scripts/budget/validateForm"
+// import { validateForm } from "/src/assets/scripts/budget/validateForm"
 
-const btnCollection = document.querySelectorAll(".budget__btn");
-btnCollection.forEach(i => i.addEventListener("click", () => {validateForm()}));
+// const btnCollection = document.querySelectorAll(".budget__btn");
+// btnCollection.forEach(i => i.addEventListener("click", () => {validateForm()}));
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const modalWelcome = document.querySelector(".budget__modal");
+
+//   modalWelcome.style.display ="flex";
+// });
+
 
