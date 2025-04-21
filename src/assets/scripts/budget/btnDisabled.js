@@ -11,10 +11,7 @@ export function setBtnDisabled () {
   const formIncomes = forms.formIncomes;
   const formExpenses = forms.formExpenses;
 
-  //date
-  const now = new Date();
-
-
+  const iconWraps = document.querySelectorAll(".budget__calendar-wrap");
 
   //form elements on focus
   const focusElement = (el) => {
@@ -22,6 +19,7 @@ export function setBtnDisabled () {
       if (evt.target.tagName == "SELECT" || evt.target.tagName == "INPUT" && !evt.target.matches("input.budget__date-input")){
         evt.target.style.outline = "2px solid rgb(62, 146, 192)";
       } else if (evt.target.matches("input.budget__date-input")) {
+        iconWraps.forEach(i => i.style.display = "none");
         evt.target.style.outline = "2px solid rgb(62, 146, 192)";
         evt.target.setAttribute("type", "date");
         setCalendar();
@@ -49,42 +47,52 @@ export function setBtnDisabled () {
       
       else if (evt.target.matches("input.budget__date-input")) {
         setCalendar();
-        
+
+         //date
+        const now = new Date();
+        const currentDate = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        const inputDate = new Date(evt.target.value.substring(0,4),evt.target.value.substring(5, 7) - 1, evt.target.value.substring(8, 10));
+
+        console.log(inputDate);
+        console.log(currentDate);
+
         if (evt.target.value == ""){
           evt.target.style.outline = "2px solid rgb(192, 98, 62)";
           evt.target.setAttribute("type", "text");
-        } else if (evt.target.value.substring(0, 4) < now.getFullYear())
-          {
-            evt.target.style.outline = "2px solid rgb(192, 98, 62)";
-        } else if ((+(evt.target.value.substring(5, 7)) - 1 < now.getMonth())) {
-              evt.target.style.outline = "2px solid rgb(192, 98, 62)";
-        } else if ((+(evt.target.value.substring(8, 10)) < now.getDate())) {
-                evt.target.style.outline = "2px solid rgb(192, 98, 62)";
-        } else {
-                evt.target.style.outline = "2px solid rgb(161, 187, 88)";
+          iconWraps.forEach(i => i.style.display = "flex");
+
+        } else if (inputDate < currentDate) {
+          console.log("catssssss");
+          evt.target.style.outline = "2px solid rgb(192, 98, 62)";
+        }
+        
+        else {
+            evt.target.style.outline = "2px solid rgb(161, 187, 88)";
         }
       }
-      let elReq = [];
-      if (el.hasAttribute("required")) {
-        elReq.push(el);
-      }
+            let elReq = [];
+            if (el.hasAttribute("required")) {
+              elReq.push(el);
+            }
+        
+            const checkAllRequiredFields = () => {
+              for (let item of elReq) {
+                if (item.style.outline !== "rgb(161, 187, 88) solid 2px") {
+                  return false; 
+                }
+              }
+              return true; 
+            };
 
-      const checkAllRequiredFields = () => {
-        for (let item of elReq) {
-          if (item.style.outline !== "rgb(161, 187, 88) solid 2px") {
-            return false; 
-          }
-        }
-        return true; 
-      };
+            const updateButtonState = () => {
+              form.elements.btn.disabled = !checkAllRequiredFields(); 
+            };
 
-      const updateButtonState = () => {
-        form.elements.btn.disabled = !checkAllRequiredFields(); 
-      };
-
-      updateButtonState();
-    });
-  };
+            updateButtonState();
+          
+        
+      });
+    };
 
   
 
@@ -101,3 +109,24 @@ export function setBtnDisabled () {
 }
 }
 setBtnDisabled();
+
+
+      
+        // else if (+(evt.target.value.length) < 10){
+        //     evt.target.style.outline = "2px solid rgb(192, 98, 62)";
+        //   }
+        // else if (!/^[0-9.]+$/.test(evt.target.value)) {
+        //   evt.target.style.outline = "2px solid rgb(192, 98, 62)";
+        // }
+        // else if (evt.target.value[2] !== ".") {
+        //   console.log(evt.target.value[2]);
+        //     evt.target.style.outline = "2px solid rgb(192, 98, 62)";
+        //   } 
+        // else if (evt.target.value[5] !== ".") {
+        //     console.log(evt.target.value[5]);
+        //       evt.target.style.outline = "2px solid rgb(192, 98, 62)";
+        //     } 
+        // else if (isNaN(evt.target.value[0-1]) || isNaN(evt.target.value[3-4]) || isNaN(evt.target.value[6-9])){
+        //   console.log(evt.target.value[5]);
+        //     evt.target.style.outline = "2px solid rgb(187, 88, 154)";
+        //   } 

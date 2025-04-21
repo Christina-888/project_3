@@ -182,30 +182,44 @@
   font-style: italic;
   color: variables.$darkgreen;
 }
-.budget__form-date {
+.budget__date-input-wrap {
+  width: 100%;
   display: flex;
+  align-items: end;
   flex-wrap: nowrap;
   background-color: white;
-  padding: 0px 7px 0 1px;
+  border: 1px solid #767676;
+}
+.budget__date-input {
+  display: flex;
+  width: 200%;
+
+}
+.budget__form-date > input {  
+  width: 100%;
+  height: 100%;
+  padding: 20px 7px 0 1px;
+  border: none;
+  display: flex;
 }
 .budget__form-date > input {
-  border: none;
-  padding: 15px 7px 0 1px;
+  justify-content: center; 
 
 }
 .budget__calendar-wrap {
-  align-self: center;
+  padding: 3px;
+  align-items:center;
+  justify-items: center;
   position: relative;
   height: 100%;
-  width: 100%;
   display: flex;
   justify-content: end;
+  z-index: 4;
 
 }
 .budget__calendar-icon {
   position: absolute;
-  // top: 540px;
-  // right: 540px;
+  z-index: 5;
 }
 .budget__btn {
   width: 230px;
