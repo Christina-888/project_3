@@ -65,28 +65,30 @@ export function setBtnDisabled () {
           console.log("catssssss");
           evt.target.style.outline = "2px solid rgb(192, 98, 62)";
         } else {
-            evt.target.style.outline = "2px solid rgb(161, 187, 88)";
-        }
-      }
+          evt.target.style.outline = "2px solid rgb(161, 187, 88)";
 
-      let elReq = [];
-      if (el.hasAttribute("required")) {
-        elReq.push(el);
-      }
-  
-      const checkAllRequiredFields = () => {
-        for (let item of elReq) {
-          if (item.style.outline !== "rgb(161, 187, 88) solid 2px") {
-            return false; 
+          let elReq = [];
+          if (el.hasAttribute("required")) {
+            elReq.push(el);
           }
-        }
-        return true; 
-      };
+      
+          const checkAllRequiredFields = () => {
+            for (let item of elReq) {
+              if (item.style.outline !== "rgb(161, 187, 88) solid 2px") {
+                return false; 
+              }
+            }
+            return true; 
+          };
 
-      const updateButtonState = () => {
-        form.elements.btn.disabled = !checkAllRequiredFields(); 
-      };
-      updateButtonState();
+          const updateButtonState = () => {
+            form.elements.btn.disabled = !checkAllRequiredFields(); 
+          };
+          updateButtonState();
+        }
+      }
+
+      
           
     });
   };  
