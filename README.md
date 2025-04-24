@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://github.com/Christina-888/project_3"><img src="./src/assets/icons/logo.svg" alt="logo" height="40"/> <br/> LFPlanner</a></h1>
+<h1 align="center"><a href="https://github.com/Christina-888/project_3"><img src="./assets/logo-euY8K5Au.svg" alt="logo" height="40"/> <br/> LFPlanner</a></h1>
 <h2 align="center">About the Project</h2>
 <p>This is <a href="https://github.com/Christina-888/project_3">a website project</a> for planning daily and financial tasks. Design and development of the website aim to make it convenient and user-friendly for visitors. The site is also adapted for mobile devices to enhance ease of use.</p>
 <h2 align="center">Structure of the Project</h2>
@@ -11,11 +11,11 @@
 <h2 align="center">Tools and languages</h2>
 <table>
   <tr>
-    <th><img src="./src/assets/icons/readme_icons/sass.svg" alt="icon sass" height="25" /></th>
-    <th><img src="./src/assets/icons/readme_icons/html.svg" alt="icon html" height="30"/></th>
-    <th><img src="./src/assets/icons/readme_icons/bem.svg" alt="icon bem" height="30"/></th>
-    <th><img src="./src/assets/icons/readme_icons/js.svg" alt="icon js" height="30"/></th>
-    <th><img src="./src/assets/icons/readme_icons/vite.svg" alt="icon vite" height="30"/></th>
+    <th><img src="/assets/.svg" alt="icon sass" height="25" /></th>
+    <th><img src="/assets/icons/readme_icons/html.svg" alt="icon html" height="30"/></th>
+    <th><img src="/assets/icons/readme_icons/bem.svg" alt="icon bem" height="30"/></th>
+    <th><img src="/assets/icons/readme_icons/js.svg" alt="icon js" height="30"/></th>
+    <th><img src="/assets/icons/readme_icons/vite.svg" alt="icon vite" height="30"/></th>
   </tr>
   <tr>
     <td>SCSS</td>
