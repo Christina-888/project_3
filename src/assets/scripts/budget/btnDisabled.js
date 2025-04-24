@@ -31,18 +31,18 @@ export function setBtnDisabled () {
   const blurElement = (el, form) => {
     el.addEventListener("blur", (evt) => {
       if ((evt.target.tagName == "SELECT" || evt.target.tagName == "INPUT") && !evt.target.matches("input.budget__date-input")) {
-      if (!evt.target.required){
-        evt.target.style.outline = "2px solid rgb(161, 187, 88)";
-      } else {
-        if (evt.target.value == ""){
-          evt.target.style.outline = "2px solid rgb(192, 98, 62)";
-        } else if (+(evt.target.value) < 0) {
-          evt.target.style.outline = "2px solid rgb(192, 98, 62)";
-        } else{
-          console.log(typeof(evt.target.value))
+        if (!evt.target.required){
           evt.target.style.outline = "2px solid rgb(161, 187, 88)";
+        } else {
+          if (evt.target.value == ""){
+            evt.target.style.outline = "2px solid rgb(192, 98, 62)";
+          } else if (+(evt.target.value) < 0) {
+            evt.target.style.outline = "2px solid rgb(192, 98, 62)";
+          } else{
+            console.log(typeof(evt.target.value))
+            evt.target.style.outline = "2px solid rgb(161, 187, 88)";
+          }
         }
-      }
       }
       
       else if (evt.target.matches("input.budget__date-input")) {
@@ -64,49 +64,42 @@ export function setBtnDisabled () {
         } else if (inputDate < currentDate) {
           console.log("catssssss");
           evt.target.style.outline = "2px solid rgb(192, 98, 62)";
-        }
-        
-        else {
+        } else {
             evt.target.style.outline = "2px solid rgb(161, 187, 88)";
         }
       }
-            let elReq = [];
-            if (el.hasAttribute("required")) {
-              elReq.push(el);
-            }
-        
-            const checkAllRequiredFields = () => {
-              for (let item of elReq) {
-                if (item.style.outline !== "rgb(161, 187, 88) solid 2px") {
-                  return false; 
-                }
-              }
-              return true; 
-            };
 
-            const updateButtonState = () => {
-              form.elements.btn.disabled = !checkAllRequiredFields(); 
-            };
-
-            updateButtonState();
-          
-        
-      });
-    };
-
+      let elReq = [];
+      if (el.hasAttribute("required")) {
+        elReq.push(el);
+      }
   
+      const checkAllRequiredFields = () => {
+        for (let item of elReq) {
+          if (item.style.outline !== "rgb(161, 187, 88) solid 2px") {
+            return false; 
+          }
+        }
+        return true; 
+      };
+
+      const updateButtonState = () => {
+        form.elements.btn.disabled = !checkAllRequiredFields(); 
+      };
+      updateButtonState();
+          
+    });
+  };  
 
   for (let item of formIncomes.elements) {
     focusElement(item);
     blurElement(item, formIncomes);
-    
-
+  }
     
   for (let item of formExpenses.elements) {
     focusElement(item);
     blurElement(item, formExpenses);
   }
-}
 }
 setBtnDisabled();
 

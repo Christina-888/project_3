@@ -1,18 +1,11 @@
 export function addTransactions () {
-  // const btnAdd = document.querySelector(".budget__btn");
 
-  // console.log(btnAdd);
+  //forms
+  const forms = document.forms;
+  const formIncomes = forms.formIncomes;
+  const formExpenses = forms.formExpenses;
 
-
-  // btnAdd.disabled = true;
-
-  // if (btnAdd.parentElement.matches("form.#form-incomes")) {
-  //   console.log("form-incomes");
-  // }
-
-  // btnAdd.addEventListener("click", () => {
-
-  // });
+  
 
 }
 addTransactions();

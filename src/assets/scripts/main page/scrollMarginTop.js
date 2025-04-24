@@ -1,6 +1,6 @@
 export function scrollMarginTop() { 
 
-  document.querySelector(".container").addEventListener('click', (evt) => {
+  document.querySelector("nav").addEventListener('click', (evt) => {
     const href = evt.target.href;
     if (evt.target.tagName === "A" && href.includes("index")) {
 
@@ -17,10 +17,9 @@ export function scrollMarginTop() {
       if (idSection == "project") {
         section.style.scrollMarginTop = `${+(document.querySelector('.header').offsetHeight) + 80}px`;
       } else {
-        section.style.scrollMarginTop = `${document.querySelector('.header').offsetHeight / 16}rem`;
+        section.style.scrollMarginTop = `${document.querySelector('.header').offsetHeight}px`;
       }
       
-    
     }
   });
 

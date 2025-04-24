@@ -133,7 +133,7 @@
                 </svg>
               </div>
               <div class="burger__form-wrapper">
-                <p class="burger__text">Don't have an account?<br/><a href="#" class="burger__item-link">Sign up</a> here.</p>
+                <p class="burger__text">Don't have an account?<br/><a href="#" class="burger__item-link" id="burger-signup">Sign up</a> here.</p>
               </div>
             </div>
            
@@ -313,7 +313,7 @@
           <form class="budget__form" id="form-expenses" name="formExpenses">
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Select a type</p>
-              <select name="type" id="expense-types" >
+              <select name="type" id="expense-types" required>
                 <option value="" selected="selected"></option>
                 <option value="Housing">Housing</option>
                 <option value="Food">Food</option>
@@ -339,7 +339,7 @@
 
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Select currency</p>
-              <select name="currency" id="expense-currency">
+              <select name="currency" id="expense-currency" required>
                 <option value="" selected="selected"></option>
                 <option value="US Dollar (USD)">US Dollar (USD)
               </option>
