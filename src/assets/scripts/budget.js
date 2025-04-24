@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 import { hideNav } from '/src/assets/scripts/main page/burger'
 
-console.log("budget");
+console.log("budget"); 
 
 
 import { selectTypeOfTransactions } from "/src/assets/scripts/budget/selectTypeOfTransactions";
