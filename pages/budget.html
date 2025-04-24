@@ -280,7 +280,8 @@
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Set date</p>
               <div class="budget__date-input-wrap">
-                <label for="income-date" class="budget__form-date"><input class="budget__date-input" name="date" id="income-date" type="text" maxlength="10" placeholder="__.__.____"
+                <label for="income-date" class="budget__form-date">
+                  <input class="budget__date-input" name="date" id="income-date" type="text" maxlength="10" placeholder="__.__.____"
                   onblur="this.placeholder='__.__.___'"
                   onfocus="this.placeholder='DD.MM.YYYY'" required/>
                   </label>
@@ -357,13 +358,16 @@
 
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Set date</p>
-              <label for="expense-date" class="budget__form-date">
-                <input class="budget__date-input" name="date" id="date-input" type="text" maxlength="10" placeholder="__.__.____"
-                onblur="this.placeholder='__.__.___'"
-                onfocus="this.placeholder='DD.MM.YYYY'" required/>
-              <div class="budget__calendar-wrap">
-                <img class="budget__calendar-icon" src="/src/assets/icons/calendar_1_.svg" alt="calendar icon">
-              </div></label>
+              <div class="budget__date-input-wrap">
+                <label for="expense-date" class="budget__form-date">
+                  <input class="budget__date-input" name="date" id="expense-date" type="text" maxlength="10" placeholder="__.__.____"
+                  onblur="this.placeholder='__.__.___'"
+                  onfocus="this.placeholder='DD.MM.YYYY'" required/>
+                </label>
+                <div class="budget__calendar-wrap">
+                  <img class="budget__calendar-icon" src="/src/assets/icons/calendar_1_.svg" alt="calendar icon">
+                </div>
+              </div>
             </div>
 
             <div class="budget__form-item-wrap">
