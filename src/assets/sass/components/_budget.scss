@@ -101,6 +101,7 @@
 .switch__label {
   margin-top: 1rem;
   @include mixin.budget-subtitle;
+  cursor: pointer;
 
 }
 .budget__switch input[type=radio] {
@@ -113,12 +114,14 @@
   border-radius: 30px;
   background-color: variables.$darkgreen-opacity;
   display: flex;
+  cursor: pointer;
 }
 .budget__switch-indicator {
   width: 40px;
   height: 40px;
   border-radius: 30px;
   background-color: variables.$darkgreen;
+  cursor: pointer;
 }
 
 
