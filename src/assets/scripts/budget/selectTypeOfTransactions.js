@@ -1,4 +1,4 @@
-import { setBtnDisabled } from "/src/assets/scripts/budget/btnDisabled"
+import { switchBtnOn } from "/src/assets/scripts/budget/switchBtnOn";
 
 export function selectTypeOfTransactions () {
   const incomeRadio = document.getElementById("incomes-switch");
@@ -23,22 +23,20 @@ export function selectTypeOfTransactions () {
   document.querySelector(".budget__switch").addEventListener("click", (evt) => {
     if (evt.target === incomeRadio) {
       selectIncomesForm(); 
-      setBtnDisabled();
+      switchBtnOn();
     }
     if (evt.target === expenseRadio) {
       selectExpensesForm();
-      setBtnDisabled();
+      switchBtnOn();
     }
     if (evt.target === indicatorWrap) {
       if (formIncomes.style.display === "none") {
-        console.log("cat")
         selectIncomesForm();
-        setBtnDisabled();
+        switchBtnOn();
       }
       else {
-        console.log("dog")
         selectExpensesForm();
-        setBtnDisabled();
+        switchBtnOn();
       }
     }  
   });

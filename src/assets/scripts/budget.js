@@ -2,6 +2,10 @@ import '/src/style.scss'
 
 import { setOffsetHeight } from '/src/assets/scripts/setOffsetHeight'
 
+let primaryCurrency = "";
+
+import { modalWelcome } from '/src/assets/scripts/budget/modalWelcome'
+
 import { initializeModal } from "/src/assets/scripts/modal";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,19 +16,18 @@ import { hideNav } from '/src/assets/scripts/main page/burger'
 
 console.log("budget"); 
 
+import { setBtnDisabled } from "/src/assets/scripts/budget/setBtnDisabled";
 
 import { selectTypeOfTransactions } from "/src/assets/scripts/budget/selectTypeOfTransactions";
 
-import { setBtnDisabled } from "/src/assets/scripts/budget/btnDisabled";
+import { switchBtnOn } from "/src/assets/scripts/budget/switchBtnOn";
 
 
-import { addTransactions} from "/src/assets/scripts/budget/addTransaction";
+import { clickBtnAdd } from "/src/assets/scripts/budget/clickBtnAdd";
+
+import { getBalanceInfo } from '/src/assets/scripts/budget/getBalanceInfo';
 
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const modalWelcome = document.querySelector(".budget__modal");
 
-//   modalWelcome.style.display ="flex";
-// });
 
 

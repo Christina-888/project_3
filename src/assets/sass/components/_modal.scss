@@ -2,26 +2,10 @@
 @use "../abstracts/variables";
 
 .modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(100, 100, 100, 0.403);
-  justify-content: center;
-  align-items: flex-start;
-  z-index: 1000;
-  padding-top: 7vh;
+  @include mixin.modal;
 }
 .modal__wrap {
-  width: 100%;
-  max-width: 850px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  background-color: white;
-  padding: 3vh 0 9vh 0;
+  @include mixin.modal-wrap;
 }
 .modal__close-btn {
   align-self: flex-end;
@@ -56,8 +40,8 @@
   flex-direction: column;
   gap: 0.75rem;
 }
-.modal__form input[type="email"],
-.modal__form input[type="password"] {
+.modal__form input,
+.modal__form input {
   padding: 10px;
   border: none;
   font-size: 1rem;

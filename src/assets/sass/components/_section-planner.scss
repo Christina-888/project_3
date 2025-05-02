@@ -139,19 +139,7 @@
 }
 
 .section-planner__card-link:hover {
-  background-color: variables.$darkgreen;
-  animation: colorTransitionLink 0.8s infinite alternate;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-}
-@keyframes colorTransitionLink {
-  0% {
-    border-color: variables.$darkgreen;
-    background-color: variables.$darkgreen;
-  }
-  100% {
-    border-color: variables.$lightgreen;
-    background-color: variables.$lightgreen;
-  }
+  @include mixin.colorTransitionLink;
 }
 .section-planner__card-link:hover > .section-planner__icon {
   fill: white;

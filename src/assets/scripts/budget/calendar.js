@@ -18,6 +18,5 @@ export function setCalendar () {
       const fullCurrentDate = now.getFullYear() + "-" + currentMonth + "-" + currentDate;
       calendars.forEach(i => i.setAttribute("min", fullCurrentDate));
     };
-    setMinDate();
-    
+    setMinDate();  
 }

@@ -21,18 +21,14 @@
       </div>
     </div>
     <div class="container__wrap">
-      
       <header class="header">
         <div class="header__logo">
           <a class="header__logo-link" href="./index.html">
             <svg class="header__logo-icon">
               <use xlink:href="./src/assets/icons/sprite.svg#logo_icon"></use>
             </svg>
-
-        
             <p class="header__logo-text">LFPlanner</p>
           </a>
-
         </div>
 
         <div class="header__wrap-nav">
@@ -52,9 +48,7 @@
                 >
               </li>
               <li class="header__list-item">
-                <a href="index.html#charts" class="header__item-link"
-                  >Charts</a
-                >
+                <a href="index.html#charts" class="header__item-link">Charts</a>
               </li>
               <li class="header__list-item">
                 <a href="mailto:email@lfplanner.com" class="header__item-link"
@@ -69,95 +63,174 @@
         </div>
 
         <!-- Login modal form -->
-      <div class="modal" id="logIn-modal">
-        <div class="modal__wrap">
-          <button class="modal__close-btn" id="close-modal">
-            <img class="modal__close-btn" src="./src/assets/icons/btn_close.svg" />
-          </button>
-          <div class="modal__content">
-            <!-- Заголовок для формы входа -->
-            <h2 class="modal__title modal__title-login">Log in to your account</h2>
-            <form class="modal__form modal__form-login">
-              <div class="modal__input-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Email" required />
-              </div>
-              <div class="modal__input-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Password" required />
-              </div>
-              <!-- <div class="modal__checkbox-wrap">
+        <div class="modal" id="logIn-modal">
+          <div class="modal__wrap">
+            <button class="modal__close-btn" id="close-modal">
+              <img
+                class="modal__close-btn"
+                src="./src/assets/icons/btn_close.svg"
+              />
+            </button>
+            <div class="modal__content">
+              <!-- Заголовок для формы входа -->
+              <h2 class="modal__title modal__title-login">
+                Log in to your account
+              </h2>
+              <form class="modal__form modal__form-login">
+                <div class="modal__input-group">
+                  <label for="email">Email:</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="modal__input-group">
+                  <label for="password">Password:</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    required
+                  />
+                </div>
+                <!-- <div class="modal__checkbox-wrap">
                 <label class="modal__checkbox" for="remember-me">Remember me</label>
                 <input type="checkbox" id="remember-me" name="remember-me">
               </div> -->
-              
 
-              <button type="submit" class="modal__submit">Sign In</button>
-              <h3 class="modal__text">Don't have an account?</h3>
-              <a href="#" class="modal__link" id="switch-to-signup">Sign up now</a>
-            </form>
-      
-            <!-- Заголовок для формы регистрации -->
-            <h2 class="modal__title modal__title-signup" style="display: none;">Create Account</h2>
-            <form class="modal__form modal__form-signup" style="display: none;">
-              <div class="modal__input-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Username" required />
-              </div>
-              <div class="modal__input-group">
-                <label for="email-signup">Email:</label>
-                <input type="email" id="email-signup" name="email" placeholder="Email" required />
-              </div>
-              <div class="modal__input-group">
-                <label for="password-signup">Password:</label>
-                <input type="password" id="password-signup" name="password" placeholder="Password" required />
-              </div>
-              <button type="submit" class="modal__submit">Sign Up</button>
-              <h3 class="modal__text">Already have an account?</h3>
-              <a href="#" class="modal__link" id="switch-to-login">Sign In</a>
-            </form>
+                <button type="submit" class="modal__submit">Sign In</button>
+                <h3 class="modal__text">Don't have an account?</h3>
+                <a href="#" class="modal__link" id="switch-to-signup"
+                  >Sign up now</a
+                >
+              </form>
+
+              <!-- Заголовок для формы регистрации -->
+              <h2
+                class="modal__title modal__title-signup"
+                style="display: none"
+              >
+                Create Account
+              </h2>
+              <form
+                class="modal__form modal__form-signup"
+                style="display: none"
+              >
+                <div class="modal__input-group">
+                  <label for="username">Username:</label>
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Username"
+                    required
+                  />
+                </div>
+                <div class="modal__input-group">
+                  <label for="email-signup">Email:</label>
+                  <input
+                    type="email"
+                    id="email-signup"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="modal__input-group">
+                  <label for="password-signup">Password:</label>
+                  <input
+                    type="password"
+                    id="password-signup"
+                    name="password"
+                    placeholder="Password"
+                    required
+                  />
+                </div>
+                <button type="submit" class="modal__submit">Sign Up</button>
+                <h3 class="modal__text">Already have an account?</h3>
+                <a href="#" class="modal__link" id="switch-to-login">Sign In</a>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-        
+
         <!-- burger menu -->
         <div class="burger__wrap">
-            <input id="burger-menu" type="checkbox">
-            <label for="burger-menu" class="burger__label">
-              <div class="burger__top-bun"></div>
-              <div class="burger__meat"></div>
-              <div class="burger__bottom-bun"></div>
-            </label>
+          <input id="burger-menu" type="checkbox" />
+          <label for="burger-menu" class="burger__label">
+            <div class="burger__top-bun"></div>
+            <div class="burger__meat"></div>
+            <div class="burger__bottom-bun"></div>
+          </label>
 
-            <div class="burger__nav-wrapper">
-              <div class="burger__nav">
-                <nav>
-                  <ul class="burger__nav-list">
-                    <li class="burger__list-item"><a href="index.html#home" class="burger__item-link burger__text">Home</a></li>
-                    <li class="burger__list-item"><a href="index.html#project" class="burger__item-link burger__text">About project</a></li>
-                    <li class="burger__list-item"><a href="index.html#planner" class="burger__item-link burger__text">Planner</a></li>
-                    <li class="burger__list-item"><a href="index.html#charts" class="burger__item-link burger__text">Charts</a></li>
-                    <li class="burger__list-item"><a href="mailto:email@lfplanner.com" class="burger__item-link burger__text">Support</a></li>
-                  </ul>
-                </nav>
-                <div class="burger__account-wrapper">
-                  <p class="burger__text">Sign in</p>
-                  <svg class="burger__account-icon">
-                    <use xlink:href="./src/assets/icons/sprite.svg#user"></use>
-                  </svg>
-                </div>
-                <div class="burger__form-wrapper">
-                  <p class="burger__text">Don't have an account?<br/><a href="#" class="burger__item-link" id="burger-signup">Sign up</a> here.</p>
-                </div>
+          <div class="burger__nav-wrapper">
+            <div class="burger__nav">
+              <nav>
+                <ul class="burger__nav-list">
+                  <li class="burger__list-item">
+                    <a
+                      href="index.html#home"
+                      class="burger__item-link burger__text"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="burger__list-item">
+                    <a
+                      href="index.html#project"
+                      class="burger__item-link burger__text"
+                      >About project</a
+                    >
+                  </li>
+                  <li class="burger__list-item">
+                    <a
+                      href="index.html#planner"
+                      class="burger__item-link burger__text"
+                      >Planner</a
+                    >
+                  </li>
+                  <li class="burger__list-item">
+                    <a
+                      href="index.html#charts"
+                      class="burger__item-link burger__text"
+                      >Charts</a
+                    >
+                  </li>
+                  <li class="burger__list-item">
+                    <a
+                      href="mailto:email@lfplanner.com"
+                      class="burger__item-link burger__text"
+                      >Support</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <div class="burger__account-wrapper">
+                <p class="burger__text">Sign in</p>
+                <svg class="burger__account-icon">
+                  <use xlink:href="./src/assets/icons/sprite.svg#user"></use>
+                </svg>
               </div>
-             
+              <div class="burger__form-wrapper">
+                <p class="burger__text">
+                  Don't have an account?<br /><a
+                    href="#"
+                    class="burger__item-link"
+                    id="burger-signup"
+                    >Sign up</a
+                  >
+                  here.
+                </p>
+              </div>
             </div>
+          </div>
         </div>
-
       </header>
 
       <main class="main">
-        
         <section class="section-home" id="home">
           <div class="section-home__wrap">
             <div class="section-home__cover">
@@ -182,8 +255,7 @@
         <section class="section-project" id="project">
           <div class="section-project__questions">
             <h2 class="section-project__title">
-              Does your budget often 
-              end up in the red?
+              Does your budget often end up in the red?
             </h2>
             <h2 class="section-project__title">
               Struggling to prioritize your purchases?
@@ -199,11 +271,9 @@
               ></use>
             </svg>
           </div>
-          
+
           <div class="section-project__info">
-            <h2
-              class="section-project__title section-project__title_black"
-            >
+            <h2 class="section-project__title section-project__title_black">
               Our service is ready to assist you!
             </h2>
             <p class="section-project__text">With LFPlanner you can easy:</p>
@@ -236,17 +306,14 @@
               We'll also notify you if your budget is running low.
             </p>
           </div>
-          
         </section>
 
         <section class="section-planner" id="planner">
-          <div class="section-planner__title-wrap section-planner__title-wrap_gradient">
-            <h2 class="section-planner__title">
-              Let's try
-            </h2>
-            <h2 class="section-planner__title">
-              LFPlanner!
-            </h2>
+          <div
+            class="section-planner__title-wrap section-planner__title-wrap_gradient"
+          >
+            <h2 class="section-planner__title">Let's try</h2>
+            <h2 class="section-planner__title">LFPlanner!</h2>
           </div>
           <p class="section-planner__text">
             Please choose the type of planning
@@ -261,7 +328,10 @@
                 there's no need to enter financial data.
               </p>
               <div class="section-planner__icon-container">
-                <a href="/pages/to_do_list.html" class="section-planner__card-link">
+                <a
+                  href="/pages/to_do_list.html"
+                  class="section-planner__card-link"
+                >
                   <svg class="section-planner__icon">
                     <use
                       xlink:href="./src/assets/icons/sprite.svg#double_arrow"
@@ -325,7 +395,6 @@
                   class="section-charts__img"
                 />
               </div>
-
             </div>
             <svg class="section-charts__icon">
               <use
@@ -348,7 +417,7 @@
           </div>
 
           <p class="footer__text">
-            Having trouble? Contact us<br/>
+            Having trouble? Contact us<br />
             <a href="mailto:email@lfplanner.com" class="footer__contact-link"
               >email@lfplanner.com</a
             >

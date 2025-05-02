@@ -136,7 +136,6 @@
                 <p class="burger__text">Don't have an account?<br/><a href="#" class="burger__item-link" id="burger-signup">Sign up</a> here.</p>
               </div>
             </div>
-           
           </div>
         </div>
     
@@ -157,7 +156,33 @@
         </div>
       </aside>
       <section class="budget">
-        
+        <!-- MODAL WELCOME -->
+        <div class="budget__modal" id="modalWelcome">
+          <div class="budget__modal-wrap">
+              <h1 class="budget__modal-title">Welcome to budget planner!</h1>
+              <div class="budget__modal-content-wrap">
+                <p class="budget__text budget__text_bold">Please select your primary currency</p>
+                <select name="currency" id="welcome-currency" required>
+                  <option value="">Select currency
+                  </option>
+                  <option value="US Dollar (USD)">US Dollar (USD)
+                  </option>
+                  <option value="Euro (EUR)">Euro (EUR)
+                  </option>
+                  <option value="Russian Ruble (RUB)">Russian Ruble (RUB)</option>
+                  <option value="Japanese Yen (JPY)">Japanese Yen (JPY)</option>
+                  <option value="British Pound (GBP)">British Pound (GBP)</option>
+                  <option value="Swiss Franc (CHF)">Swiss Franc (CHF)</option>
+                  <option value="Australian Dollar (AUD)">Australian Dollar (AUD)s</option>
+                  <option value="Chinese Yuan (CNY)">Chinese Yuan (CNY)</option>
+                  <option value="Kazakhstani Tenge (KZT)">Kazakhstani Tenge (KZT)</option>
+                </select>
+                <button type="button" class="budget__modal-btn">Confirm</button>
+              </div>
+              
+          </div>
+        </div>
+            
         <!-- BUDGET -->
         <div class="budget__container">
         
@@ -165,7 +190,7 @@
 
           <!-- block BALANCE -->
           <div class="budget__balance">
-            <h1 class="budget__title">YOUR CURRENT BALANCE</h1>
+            <h2 class="budget__title">YOUR CURRENT BALANCE</h2>
             <div class="budget__balance-wrap">
               <div class="budget__balance-item-wrap">
                 <h2 class="budget__subtitle">Incomes:</h2>
@@ -189,40 +214,16 @@
         
           <!-- block TRANSACTIONS -->
           <div class="budget__transactions">
-            <h2 class="budget__title">UPCOMING TRANSACTIONS</h2>
-            <div class="budget__month-transaction-wrap">
-
-              <div class="budget__transactions-date">
-                <h3 class="budget__subtitle">April, 6</h3>
-                <div class="budget__transactions-wrap">
-                  <p class="budget__text budget__text_green">+50000</p>
-                  <p class="budget__text">Salary</p>
-                </div>
-                <div class="budget__transactions-wrap">
-                <p class="budget__text budget__text_red">-30000</p>
-                <p class="budget__text">Education</p>
-                </div>
-
-              </div>
-              
-              <div class="budget__transactions-date">
-                <h3 class="budget__subtitle">April, 7</h3>
-                <div class="budget__transactions-wrap budget__transactions-wrap_comment">
-                  <p class="budget__text budget__text_red">-10000</p>
-                  <p class="budget__text">Utility payments</p>
-                  <p class="budget__transaction-comment">Appartments in Moscow</p>
-                </div>
-              </div>                
-              
-            </div>
-            
+            <h2 class="budget__title">UPCOMING TRANSACTIONS</h2> 
+            <p class="budget__text" id="transactionsMessage">To view transactions, please fill out the form.</p>           
           </div>
 
         </div>
 
         <!-- block NEW TRANSACTION FORM-->
-
         <div class="budget__wrap budget__wrap_grey">
+          
+          <!-- SWITCH -->
           <div class="budget__switch">
             <label class="switch__label" id="incomes-switch"><input name="switch" type="radio" checked/>Incomes</label>
             <div class="budget__switch-indicator-wrap">
@@ -230,10 +231,11 @@
               </div>
             </div>
             <label  class="switch__label" id="expenses-switch"><input name="switch" type="radio" />Expenses</label>
-            
           </div>
 
+          <!-- INCOMES FORM -->
           <form class="budget__form" id="form-incomes" name="formIncomes" >
+            <!-- select type -->
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Select a type</p>
               <select name="type" id="income-types" required>
@@ -249,16 +251,31 @@
                 <option value="Passive income">Passive income</option>
                 <option value="Other income">Other income and inheritance</option>
               </select>
+              <div class="budget__required-field-wrap">
+                <svg class="budget__required-icon">
+                  <use xlink:href="/src/assets/icons/sprite.svg#asterisk"></use>
+                </svg>
+              </div>
             </div>
 
+            <!-- comment field -->
             <div class="budget__form-item-wrap">
-              <label for="expense-value" ><input class="budget__form-value" name="comment-field" id="income-comment-field" type="text" placeholder="Comment field"/></label>
+              <label for="income-comment-field" ><input class="budget__form-value" name="comment" id="income-comment-field" type="text" placeholder="Comment field" autocomplete="off"/></label>
+              <div class="budget__required-field-wrap">
+              </div>
             </div>
             
+            <!-- value -->
             <div class="budget__form-item-wrap">
-            <label for="income-value" ><input class="budget__form-value" name="sum" id="income-value" type="number" placeholder="Put income value" required/></label>
+              <label for="income-value" ><input class="budget__form-value" name="sum" id="income-value" type="text" placeholder="Put income value greater than zero" autocomplete="off" required/></label>
+              <div class="budget__required-field-wrap">
+                <svg class="budget__required-icon">
+                  <use xlink:href="/src/assets/icons/sprite.svg#asterisk"></use>
+                </svg>
+              </div>
             </div>
 
+            <!-- currency -->
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Select currency</p>
               <select name="currency" id="income-currency" required>
@@ -275,27 +292,36 @@
                 <option value="Chinese Yuan (CNY)">Chinese Yuan (CNY)</option>
                 <option value="Kazakhstani Tenge (KZT)">Kazakhstani Tenge (KZT)</option>
               </select>
+              <div class="budget__required-field-wrap">
+                <svg class="budget__required-icon">
+                  <use xlink:href="/src/assets/icons/sprite.svg#asterisk"></use>
+                </svg>
+              </div>
             </div>
 
+            <!-- date -->
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Set date</p>
               <div class="budget__date-input-wrap">
-                <label for="income-date" class="budget__form-date">
-                  <input class="budget__date-input" name="date" id="income-date" type="text" maxlength="10" placeholder="__.__.____"
-                  onblur="this.placeholder='__.__.___'"
-                  onfocus="this.placeholder='DD.MM.YYYY'" required/>
-                  </label>
-                  <div class="budget__calendar-wrap">
-                    <img class="budget__calendar-icon" src="/src/assets/icons/calendar_1_.svg" alt="calendar icon">
-                  </div>
+                <label for="income-date" class="budget__form-date"></label>
+                <input class="budget__date-input" name="date" id="income-date" type="text" maxlength="10" placeholder="DD.MM.YYYY"
+                required/>
+                <div class="budget__calendar-wrap" name="calendarWrap">
+                  <img class="budget__calendar-icon" src="/src/assets/icons/calendar_1_.svg" alt="calendar icon">
+                </div>
               </div>
-              
+              <div class="budget__required-field-wrap">
+                <svg class="budget__required-icon">
+                  <use xlink:href="/src/assets/icons/sprite.svg#asterisk"></use>
+                </svg>
+              </div>
             </div>
 
+            <!-- repeat reminder -->
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Repeat reminder</p>
   
-              <select name="income-repeat-reminder" id="income-repeat-reminder">
+              <select name="reminder" id="income-repeat-reminder">
                 <option value="no repeat" selected="selected">no repeat</option>
                 <option value="every day">every day
                 </option>
@@ -306,12 +332,27 @@
                 <option value="every week">every year
                 </option>
               </select>
+              <div class="budget__required-field-wrap">
+              </div>
             </div>
 
-            <button class="budget__btn" type="button" name="btn">Add</button>
+            <!-- required text -->
+            <div class="budget__form-item-wrap">
+              <div class="budget__required-field-wrap">
+                <svg class="budget__required-icon">
+                  <use xlink:href="/src/assets/icons/sprite.svg#asterisk"></use>
+                </svg>
+              </div>
+              <p class="budget__text">Required form fields</p>
+            </div>  
+
+            <button class="budget__btn" type="submit" name="btn">Add</button>
           </form>
 
+          <!-- EXPENSES FORM -->
           <form class="budget__form" id="form-expenses" name="formExpenses">
+
+            <!-- select type -->
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Select a type</p>
               <select name="type" id="expense-types" required>
@@ -328,16 +369,31 @@
                 <option value="Taxes">Taxes</option>
                 <option value="Other expense">Other income and inheritance</option>
               </select>
+              <div class="budget__required-field-wrap">
+                <svg class="budget__required-icon">
+                  <use xlink:href="/src/assets/icons/sprite.svg#asterisk"></use>
+                </svg>
+              </div>
             </div>
             
+            <!-- comment field -->
             <div class="budget__form-item-wrap">
-              <label for="expense-value" ><input class="budget__form-value" name="comment-field" id="expense-comment-field" type="text" placeholder="Comment field"/></label>
+              <label for="expense-comment-fiel" ><input class="budget__form-value" name="comment" id="expense-comment-field" type="text" placeholder="Comment field" autocomplete="off"/></label>
+              <div class="budget__required-field-wrap">
+              </div>
             </div>
 
+            <!-- value -->
             <div class="budget__form-item-wrap">
-            <label for="expense-value" ><input class="budget__form-value" name="sum" id="expense-value" type="number" placeholder="Put expense value" required/></label>
+            <label for="expense-value" ><input class="budget__form-value" name="sum" id="expense-value" type="text" placeholder="Put expense value greater than zero" autocomplete="off" required/></label>
+            <div class="budget__required-field-wrap">
+              <svg class="budget__required-icon">
+                <use xlink:href="/src/assets/icons/sprite.svg#asterisk"></use>
+              </svg>
+            </div>
             </div>
 
+            <!-- currency -->
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Select currency</p>
               <select name="currency" id="expense-currency" required>
@@ -354,26 +410,37 @@
                 <option value="Chinese Yuan (CNY)">Chinese Yuan (CNY)</option>
                 <option value="Kazakhstani Tenge (KZT)">Kazakhstani Tenge (KZT)</option>
               </select>
+              <div class="budget__required-field-wrap">
+                <svg class="budget__required-icon">
+                  <use xlink:href="/src/assets/icons/sprite.svg#asterisk"></use>
+                </svg>
+              </div>
             </div>
 
+            <!-- date -->
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Set date</p>
               <div class="budget__date-input-wrap">
                 <label for="expense-date" class="budget__form-date">
-                  <input class="budget__date-input" name="date" id="expense-date" type="text" maxlength="10" placeholder="__.__.____"
-                  onblur="this.placeholder='__.__.___'"
-                  onfocus="this.placeholder='DD.MM.YYYY'" required/>
                 </label>
-                <div class="budget__calendar-wrap">
+                  <input class="budget__date-input" name="date" id="expense-date" type="text" maxlength="10" placeholder="DD.MM.YYYY" required/>
+                
+                <div class="budget__calendar-wrap" name="calendarWrap">
                   <img class="budget__calendar-icon" src="/src/assets/icons/calendar_1_.svg" alt="calendar icon">
                 </div>
               </div>
+              <div class="budget__required-field-wrap">
+                <svg class="budget__required-icon">
+                  <use xlink:href="/src/assets/icons/sprite.svg#asterisk"></use>
+                </svg>
+              </div>
             </div>
 
+            <!-- repeat reminder -->
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text">Repeat reminder</p>
   
-              <select name="expense-repeat-reminder" id="expense-repeat-reminder">
+              <select name="reminder" id="expense-repeat-reminder">
                 <option value="no repeat" selected="selected">no repeat</option>
                 <option value="every day">every day
                 </option>
@@ -384,13 +451,27 @@
                 <option value="every week">every year
                 </option>
               </select>
+              <div class="budget__required-field-wrap">
+              </div>
             </div>
 
+            <!-- checkbox -->
             <div class="budget__form-item-wrap">
               <p class="budget__form-item-text budget__form-item-text_large">Add to the to do list</p>
-              <label for="expense-list" ><input name="expense-list" id="expense-list" type="checkbox" class="budget__checkbox" /></label>
+              <label for="expense-list" ><input name="taskList" id="expense-list" type="checkbox" class="budget__checkbox" /></label>
             </div>
-            <button class="budget__btn" type="button" name="btn">Add</button>
+
+            <!-- required text -->
+            <div class="budget__form-item-wrap">
+              <div class="budget__required-field-wrap">
+                <svg class="budget__required-icon">
+                  <use xlink:href="/src/assets/icons/sprite.svg#asterisk"></use>
+                </svg>
+              </div>
+              <p class="budget__text">Required form fields</p>
+            </div>  
+
+            <button class="budget__btn" type="submit" name="btn">Add</button>
           </form>
           
         </div>

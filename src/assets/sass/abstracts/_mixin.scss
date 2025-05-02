@@ -1,8 +1,33 @@
 @use "./variables";
 
-@mixin max-width {
-  max-width: 90rem; /*1440px*/
-  margin: 0;
+@mixin modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(100, 100, 100, 0.403);
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1000;
+  padding-top: 7vh;
+}
+@mixin modal-wrap {
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: white;
+  padding: 3vh 0 9vh 0;
+}
+
+@mixin modal-close-btn {
+  
+}
+@mixin modal-content {
+  
 }
 
 @mixin grid {
@@ -41,6 +66,35 @@
   font-size: 2.45rem;
 }
 
+@mixin budget__btn {
+  font-family: variables.$DMSerif;
+  font-size: 2.3rem;
+  color: white;
+  border: variables.$darkgreen 3px solid;
+  border-radius: 25px;
+}
+
+@mixin budget__btn-hover {
+  background-color: variables.$darkgreen;
+  color: white;
+  animation: none;
+  outline: none;
+  border: none;
+
+}
+@mixin budget__btn-active {
+  background-color: variables.$lightgreen;
+  color: white;
+  animation: none;
+  outline: none;
+}
+@mixin budget__btn-disabled {
+  background-color: variables.$darkgreen-opacity;
+  color: white;
+  border: none;
+  animation: none;
+  box-shadow: none;
+}
 
 //icon effects
 @mixin hover-white-icon {
@@ -126,6 +180,22 @@
     }
     100% {
       border-color: variables.$lightgreen;
+    }
+  }
+}
+
+@mixin colorTransitionLink {
+  background-color: variables.$darkgreen;
+  animation: colorTransitionLink 0.8s infinite alternate;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  @keyframes colorTransitionLink {
+    0% {
+      border-color: variables.$darkgreen;
+      background-color: variables.$darkgreen;
+    }
+    100% {
+      border-color: variables.$lightgreen;
+      background-color: variables.$lightgreen;
     }
   }
 }
