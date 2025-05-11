@@ -25,9 +25,8 @@
     <td>Vite</td>
   </tr>
 </table>
-<h2 align="center">Project team</h2>
+<h2 align="center">Thanks to all Contributors</h2>
 <ul> 
-  <li><a href="https://github.com/makfluffy575">Maria Shatskaya</a> (Main page, budget planner, website design)</li>
-  <li><a href="https://github.com/Christina-888">Christina Bykadorova</a> (To do list planner)</li>
-  <li><a href="https://github.com/Polindrom6">Polina</a> (Modal for sign in and sign up)</li>
+  <li><a href="https://github.com/makfluffy575">Maria Shatskaya</a></li>
+  <li><a href="https://github.com/Polindrom6">Polina Deryaga</a></li>
 </ul>
